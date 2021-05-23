@@ -1,19 +1,19 @@
 <div id="tela" class="">
 <!-- Início -->
-    <div id="home-container" class="text-center mx-auto">
+    <div id="home-container" class="text-center">
         
     </div>
 
     <!-- Questões -->
-    <div id="question-container" class="d-none q-container">
+    <div id="question-container" class="">
         <div id="question" class="text-center h3">Question</div>
         <div id="answer-buttons" class="text-center my-5" style="max-height:90%">
-            <button class="btn btn-light">Resposta 1</button>
+            <button class="btn btn-secondary">Resposta 1</button>
         </div>
     </div>
         
 <!-- Resultado -->
-    <div id="result-container" class="revelacao text-center d-none q-container">
+    <div id="result-container" class="">
         <div class="t-quiz h1">RESULTADO</div>
         <div class="my-3">
             <img id="img-res" width=30% alt="imagem do sabonete" src=""/>
@@ -26,7 +26,7 @@
     </div>
 
 <!-- Erro -->
-    <div id="error-container" class="text-center d-none q-container">
+    <div id="error-container" class="text-center">
         <div class="t-quiz h1">OPS...</div>
         <div>
             <img width=25% alt="nome sabonete" src="https://weakwifisolutions.com/wp-content/uploads/2019/08/error-red-cross-1.png?ezimgfmt=rs:372x372/rscb2/ng:webp/ngcb2"/>
@@ -39,6 +39,7 @@
 <script type="text/javascript">
     let currentQuestionIndex
 
+    $("#question").css("color", "red");
 
     /* startButton.addEventListener('click', comecarJogo)
     nextButton.addEventListener('click', () => {
