@@ -1,0 +1,88 @@
+<div id="tela" class="">
+<!-- Início -->
+    <div id="home-container" class="text-center mx-auto">
+        
+    </div>
+
+    <!-- Questões -->
+    <div id="question-container" class="d-none q-container">
+        <div id="question" class="text-center h3">Question</div>
+        <div id="answer-buttons" class="text-center my-5" style="max-height:90%">
+            <button class="btn btn-light">Resposta 1</button>
+        </div>
+    </div>
+        
+<!-- Resultado -->
+    <div id="result-container" class="revelacao text-center d-none q-container">
+        <div class="t-quiz h1">RESULTADO</div>
+        <div class="my-3">
+            <img id="img-res" width=30% alt="imagem do sabonete" src=""/>
+            <div id="txt-res" class="h2 mt-4"></div>
+        </div>
+        <div class="p-3">
+            <button id="restart-btn" type="button" class="btn btn-light btn-lg">RECOMEÇAR</button>
+            <a id="btn-loja" class="btn btn-success btn-lg" href="">VER NA LOJA</a>
+        </div>
+    </div>
+
+<!-- Erro -->
+    <div id="error-container" class="text-center d-none q-container">
+        <div class="t-quiz h1">OPS...</div>
+        <div>
+            <img width=25% alt="nome sabonete" src="https://weakwifisolutions.com/wp-content/uploads/2019/08/error-red-cross-1.png?ezimgfmt=rs:372x372/rscb2/ng:webp/ngcb2"/>
+            <div class="h2">Desculpa, o seu resultado não foi encontrado. Por favor, tente novamente.</div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    let currentQuestionIndex
+
+
+    /* startButton.addEventListener('click', comecarJogo)
+    nextButton.addEventListener('click', () => {
+        /* escolherResposta();
+        currentQuestionIndex++
+        proximaPergunta()
+    })
+    finalizeButton.addEventListener('click', () => {
+        escolherResposta();
+        currentQuestionIndex++
+        mostrarResultado() (?)
+        questionContainerElement.classList.add('fade-out')
+        setTimeout(telaLista, 1500)
+    }) */
+
+    function comecarJogo() {
+        // startButton.classList.add("d-none")
+        // currentQuestionIndex = 0
+        proximaPergunta()
+    }
+
+    function proximaPergunta() {
+        resetarInstancia()
+        mostrarPergunta(questoes[currentQuestionIndex])
+    }
+
+    function mostrarPergunta(questao) {
+        
+    }
+
+    function resetarInstancia() {
+        
+    }
+
+    function clicouBotao() {
+        
+    }
+    
+    function escolherResposta() {
+
+    }
+
+    function mostrarResultado(produto) {
+        
+    }
+
+</script>
