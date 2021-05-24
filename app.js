@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 app.use(require("express-ejs-layouts"));
 
 app.get("/", (req, res) => {
-    res.render("index")
+    res.render("inicio");
 })
 
 app.listen(1337);
