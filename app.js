@@ -1,26 +1,36 @@
-const path = require("path")
-const ejs = require("ejs");
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
+const wrap = require("express-async-error-wrapper");
+const path = require("path");
+const ejs = require("ejs");
+const Questao = require("./models/questao");
 const app = express();
 
-// Explica para o express qual será o diretório de onde serviremos os
-// arquivos estáticos (js, css, imagens etc...)
-app.use(express.static(path.join(__dirname, "public"), {
+
+// Configura o diretório de onde tirar as views (páginas que serão devolvidas
+// pelos tratadores das rotas)
+app.set("views", path.join(__dirname, "/views"));
+app.use(express.static(path.join(__dirname, "/public"), {
     cacheControl: true,
     etag: false,
     maxAge: "30d"
 }));
-
-// Configura o diretório de onde tirar as views
-app.set("views", path.join(__dirname, "views"));
+ 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
 app.use(require("express-ejs-layouts"));
 
-app.get("/", (req, res) => {
-    res.render("inicio");
-})
 
-app.listen(1337);
+// app.get("/", (req, res) => {
+//     res.render("index")
+// })
+app.use("/", require("./routes/questao"));
 
-//link para o docs https://docs.google.com/document/d/188zFK57bI6tSC78ZX-blu2ELM-IDbN20tBDdh3tIwdo/edit
+
+app.listen(1337, () => {
+	console.log("Executando servidor na porta 1337");
+});
+
