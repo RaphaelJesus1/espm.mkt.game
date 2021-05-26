@@ -24,11 +24,17 @@ app.set("view engine", "ejs");
 app.use(require("express-ejs-layouts"));
 
 
-// app.get("/", (req, res) => {
-//     res.render("index")
-// })
-app.use("/", require("./routes/questao"));
+// ROTAS -------------------------------------------------
+app.get("/", (req, res) => {
+    res.render("index");
+});
 
+app.get("/quiz", wrap(async (req, res) => {
+    //let lista = JSON.stringify(await Questao.listar());
+    //res.render("quiz", { lista: lista });
+    res.render("quiz");
+}));
+// ------------------------------------------------------
 
 app.listen(1337, () => {
 	console.log("Executando servidor na porta 1337");
