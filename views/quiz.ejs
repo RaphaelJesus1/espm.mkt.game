@@ -44,6 +44,19 @@
 </div>
 
 <script type="text/javascript">
+    const fundos = ["bg-metro", "bg-facul", "bg-ponte", "bg-parque"]
+    let i = 0
+
+    let mudarFundo = setInterval(() => {
+        $("#background-container").removeClass()
+        if(i >= fundos.length - 1) {
+            i = 0
+        } else {
+            i++
+        }
+        $("#background-container").addClass(fundos[i])
+    }, 10000)
+
     let currentQuestionIndex
 
     /* startButton.addEventListener('click', comecarJogo)
