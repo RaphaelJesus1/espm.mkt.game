@@ -1,21 +1,68 @@
-#image-container {
-    height: 300px;
+/* -------------------------------------------------------------------------------
+/  -                                 GERAL                                       -
+/  -------------------------------------------------------------------------------
+*/
+body, html {
+  height: 100%;
 }
 
-.limitador{
-    height: 100%;
-    background-image: url('https://www.10wallpaper.com/wallpaper/medium/1410/Coast_Sunset-Scenery_HD_Wallpaper_medium.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.tela-quiz {
+  height: 100vh;
+}
+
+.nav-right {
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-bottom{
+position: fixed;
+bottom: 0;
+}
+
+/* -------------------------------------------------------------------------------
+/  -                               CONTAINERS                                    -
+/  -------------------------------------------------------------------------------
+*/
+#background-container {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 #text-container{
-    height: 200px;
+    max-height: 200px;
+    position: absolute;
+    background-color: #111a;
+    color: #fff;
 }
 
 #answer-buttons{
     max-height: 150px;
+}
+
+#answer-buttons button{
+  margin: 10px 15px;
+  flex-grow: 1;
+}
+
+/*--------------------------------------------------------------------------
+  -                            BACKGROUNDS                                 -
+  --------------------------------------------------------------------------
+*/
+.bg-metro {
+  background-image: url('/img/anarosa.png');
+}
+.bg-ponte {
+  background-image: url('/img/ponte.png');
+}
+.bg-facul {
+  background-image: url('/img/facul.png');
+}
+.bg-parque {
+  background-image: url('/img/parque.png');
 }
 
 /* -------------------------------------------------------------------------------
@@ -62,10 +109,4 @@
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
-
-  .nav-right {
-      float: right;
-      display: flex;
-      flex-direction: column;
   }
