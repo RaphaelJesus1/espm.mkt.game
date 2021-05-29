@@ -2,22 +2,16 @@
 
 <div class="tela-quiz">
     <!-- Imagem FUNDO -->
-    <div id="background-container" class="bg-metro"></div>
+    <div id="background-container" class="bg-metro">
+        <button type="button" class="btn btn-outline-primary" onclick="openQuestions()">Abrir</button>
+        <button type="button" class="btn btn-outline-secondary" onclick="closeQuestions()">Fechar</button>
+    </div>
 
     <!-- Texto SOBREPOSIÇÃO -->
-    <div id="text-container" class="p-3 fixed-bottom">
+    <div id="text-container" class="p-3 absolute-bottom">
         <p class="text-center">O texto das perguntas deve ser inserido aqui!</p>
     </div>
 
-    <!-- Questões APARIÇÃO -->
-    <!-- <div id="question-container" class="bg-dark fixed-bottom">
-        <div id="answer-buttons" class="d-flex justify-content-around flex-wrap">
-            <button class="btn btn-secondary align-self-center">Resposta 1</button>
-            <button class="btn btn-secondary align-self-center">Resposta 2</button>
-            <button class="btn btn-secondary align-self-center">Resposta 3</button>
-            <button class="btn btn-secondary align-self-center">Resposta 4</button>
-        </div>
-    </div> -->
         
     <!-- Resultado -->
     <div id="result-container" class="d-none">
@@ -41,6 +35,16 @@
         </div>
     </div>
 
+</div>
+
+<!-- Questões APARIÇÃO -->
+<div id="question-container" class="bg-dark bottom-nav">
+    <div id="answer-buttons" class="d-flex justify-content-around flex-wrap">
+        <button class="btn btn-secondary align-self-center">Resposta 1</button>
+        <button class="btn btn-secondary align-self-center">Resposta 2</button>
+        <button class="btn btn-secondary align-self-center">Resposta 3</button>
+        <button class="btn btn-secondary align-self-center">Resposta 4</button>
+    </div>
 </div>
 
 <script type="text/javascript">

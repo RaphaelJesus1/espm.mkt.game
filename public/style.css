@@ -4,21 +4,27 @@
 */
 body, html {
   height: 100%;
+  overflow-y: hidden;
 }
 
 .tela-quiz {
+  position: relative;
   height: 100vh;
 }
 
 .nav-right {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
   display: flex;
   flex-direction: column;
 }
 
-.fixed-bottom{
-position: fixed;
+.absolute-bottom{
+position: absolute;
 bottom: 0;
+width: 100%;
 }
 
 /* -------------------------------------------------------------------------------
@@ -69,11 +75,11 @@ bottom: 0;
 /  -                                SideBars                                     -
 /  -------------------------------------------------------------------------------
 /* The side navigation menu */
-.sidenav {
+.sidenav, .bottomnav {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 3; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0;
     background-color: #111; /* Black*/
@@ -104,9 +110,21 @@ bottom: 0;
     right: 5px;
     font-size: 36px;
   }
+
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  .tela-quiz {
+    transition: height .5s;
+  }
+
+  .bottomnav{
+    bottom:0;
+    width: inherit;
+    height: 0;
+    overflow-y: hidden;
+  }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+    .sidenav, .bottomnav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
