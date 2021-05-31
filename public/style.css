@@ -31,6 +31,13 @@ width: 100%;
 /  -                               CONTAINERS                                    -
 /  -------------------------------------------------------------------------------
 */
+.tela-container{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 #background-container {
   height: 100%;
   background-repeat: no-repeat;
@@ -70,6 +77,10 @@ width: 100%;
 .bg-parque {
   background-image: url('/img/parque.png');
 }
+.bg-foodtruck {
+  background-image: url('/img/hotdog.jpg');
+}
+
 
 /* -------------------------------------------------------------------------------
 /  -                                SideBars                                     -
