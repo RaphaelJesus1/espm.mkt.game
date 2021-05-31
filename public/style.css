@@ -139,3 +139,17 @@ width: 100%;
     .sidenav, .bottomnav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+.abas{
+  z-index:900;
+   position: absolute; 
+   height: 45px;
+   width: 45px;
+   border-radius:0
+}
+.abasEsq{
+  left:0; 
+}
+.abasDir{
+  right:0; 
+}
