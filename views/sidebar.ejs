@@ -1,19 +1,19 @@
     <!-- Nav tabs  -->
-    <div class="nav-right">
+    <!-- <div class="nav-right">
         <button type="button" class="btn" onclick="openNav('swotNav')">SWOT</button>
         <button type="button" class="btn" onclick="openNav('mercNav')">M</button>
         <button type="button" class="btn" onclick="openNav('concNav')">C</button>
         <button type="button" class="btn" onclick="openNav('ambiNav')">A</button>
-    </div>
-    <button class="btn btn-dark abas abasEsq" style="top:25%;">S</button>
-    <button class="btn btn-dark abas abasEsq" style="top:32%;" >W</button>
-    <button class="btn btn-dark abas abasEsq" style="top:40%;" >O</button>
-    <button class="btn btn-dark abas abasEsq" style="top:48%;" >T</button>
+    </div> -->
+    <button class="btn btn-dark abas abasEsq" style="top:30%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Forças" data-bs-content="Forças blablabla" >S</button>
+    <button class="btn btn-dark abas abasEsq" style="top:38%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right"  title="Fraquezas"  data-bs-content="Right popover">W</button>
+    <button class="btn btn-dark abas abasEsq" style="top:46%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Oportunidades" data-bs-content="Right popover">O</button>
+    <button class="btn btn-dark abas abasEsq" style="top:54%;"data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Ameaças" data-bs-content="Ameaças">T</button>
 
-    <button class="btn btn-dark abas abasDir" style="top:25%;"><i class="fas fa-user-friends"></i></button>
-    <button class="btn btn-dark abas abasDir" style="top:32%;" ><i class="fas fa-map-marker-alt"></i></button>
-    <button class="btn btn-dark abas abasDir" style="top:40%;" ><i class="fas fa-hotdog"></i></button>
-    <button class="btn btn-dark abas abasDir" style="top:48%;" ><i class="fas fa-bolt"></i></button>
+    <button class="btn btn-dark abas abasDir" style="top:30%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Público-alvo" data-bs-content="blablablablabla" ><i class="fas fa-user-friends"></i></button>
+    <button class="btn btn-dark abas abasDir" style="top:38%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Local" data-bs-content="blablablablablablablabla"  ><i class="fas fa-map-marker-alt"></i></button>
+    <button class="btn btn-dark abas abasDir" style="top:46%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Alimento Vendido" data-bs-content="blablablablablablablabla"  ><i class="fas fa-hotdog"></i></button>
+    <button class="btn btn-dark abas abasDir" style="top:54%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Concorrência" data-bs-content="blablablablablablablabla"  ><i class="fas fa-bolt"></i></button>
 
      <!-- Tab panes -->
      <div id="swotNav" class="sidenav">
@@ -24,4 +24,12 @@
         <a href="#">Contact</a>
       </div>
 
-     
+      <script>
+        $(document).ready(function(){
+          $('[data-bs-toggle="popover"]').popover();
+        });
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+            trigger: 'focus'
+        })
+      </script>
+      

@@ -20,3 +20,4 @@ function openQuestions() {
     // document.querySelector(".tela-quiz").style.marginBottom = "0";
     document.querySelector(".tela-quiz").style.height = "100vh";
   }
+
