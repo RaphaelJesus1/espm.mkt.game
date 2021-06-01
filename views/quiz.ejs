@@ -47,21 +47,17 @@
     </div>
 </div>
 
+<script type="text/javascript" src="/js/intro.js"></script>
+<script type="text/javascript" src="/js/dia1.js"></script>
+<script type="text/javascript" src="/js/dia2.js"></script>
+
 <script type="text/javascript">
-    const fundos = ["bg-metro", "bg-facul", "bg-ponte", "bg-parque"]
-    let i = 0
+    let _diaAtual = [];
+    const containerText = $("#text-container")
 
-    let mudarFundo = setInterval(() => {
-        $("#background-container").removeClass()
-        if(i >= fundos.length - 1) {
-            i = 0
-        } else {
-            i++
-        }
-        $("#background-container").addClass(fundos[i])
-    }, 10000)
-
-    let currentQuestionIndex
+    $(function() {
+        comecarJogo();
+    })
 
     /* startButton.addEventListener('click', comecarJogo)
     nextButton.addEventListener('click', () => {
@@ -78,15 +74,16 @@
     }) */
 
     function comecarJogo() {
-        // startButton.classList.add("d-none")
-        // currentQuestionIndex = 0
-        proximaPergunta()
+        mudarDia(_intro);
+        proximoTexto()
     }
 
-    function proximaPergunta() {
-        resetarInstancia()
-        mostrarPergunta(questoes[currentQuestionIndex])
+    function proximoTexto() {
+        // remove o elemento do array e joga no container
+        containerText.html(_diaAtual.shift())
     }
+
+    containerText.click(() => proximoTexto())
 
     function mostrarPergunta(questao) {
         
@@ -108,4 +105,9 @@
         
     }
 
+    function mudarDia(novoDia) {
+        _diaAtual = novoDia.map((x) => x);
+    }
+
+    
 </script>
