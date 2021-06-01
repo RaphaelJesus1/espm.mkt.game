@@ -2,10 +2,7 @@
 
 <div class="tela-quiz">
     <!-- Imagem FUNDO -->
-    <div id="background-container" class="bg-metro">
-        <button type="button" class="btn btn-outline-primary" onclick="openQuestions()">Abrir</button>
-        <button type="button" class="btn btn-outline-secondary" onclick="closeQuestions()">Fechar</button>
-    </div>
+    <div id="background-container" class="bg-metro"></div>
 
     <!-- Texto SOBREPOSIÇÃO -->
     <div id="text-container" class="p-3 absolute-bottom">
@@ -58,6 +55,8 @@
     let _diaAtual = [];
     const containerText = $("#text-container")
     const containerBtn = $("#answer-buttons")
+    const containerBg = $("#background-container")
+    var nomeJogador = "";
 
     $(function() {
         comecarJogo();
@@ -99,6 +98,39 @@
 
     containerText.click(() => proximoTexto())
 
+    function montarInput(alvo) {
+        limparBotoes()
+        containerText.off("click")
+        containerText.addClass("disabled")
+        let input = document.createElement("input")
+        input.id = "inputName"
+        input.type = "text"
+        input.classList.add("form-control")
+        input.classList.add("input-sm")
+        input.addEventListener("keyup", event => {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                sendBtn.click();
+            }
+        })
+        
+        let sendBtn = document.createElement("button")
+        sendBtn.classList.add("btn")
+        sendBtn.classList.add("btn-secondary")
+        sendBtn.innerHTML = "<i class='fas fa-paper-plane'></i>"
+        sendBtn.addEventListener("click", event => {
+            eval(alvo + " = " + "'" + input.value + "'")
+            closeQuestions()
+            containerText.append(`<span class="player d-block">&gt "${input.value}"</span>`)
+            containerText.on("click", () => {proximoTexto()})
+        })
+
+        containerBtn.append(input)
+        containerBtn.append(sendBtn)
+        openQuestions()
+    }
+
     function montarEscolhas(contexto) {
         limparBotoes()
         // Criar os botões
@@ -128,6 +160,14 @@
 
     function limparBotoes() {
         containerBtn.html("")
+    }
+
+    function mudarBg(novoBg) {
+        containerBg.fadeOut(800)
+        containerBg.removeClass()
+        containerBg.addClass(novoBg)
+        containerBg.fadeIn(800)
+        //containerBg.fadeTo(1000, 1)
     }
 
     function clicouBotao() {

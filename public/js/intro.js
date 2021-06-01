@@ -28,7 +28,8 @@ Você lhe entrega um hotdog e ele dá uma bela mordida, saboreando com enorme en
 
 <span class="indefinido">???: Meu deus, isso está maravilhoso! Foi você que fez mesmo? Qual é seu nome?</span>#
 
-<span class="player">“Eu me chamo... ____” //INPUT DE TEXTO AQUI! [input]</span>#
+<span class="player">“Eu me chamo...”</span>#
+codigo montarInput("nomeJogador")#
 
 <span class="marcio">???: “É um prazer, eu me chamo Márcio. Eu sou professor de marketing naquela faculdade ali de trás. Cachorro-quente é o meu lanche favorito, e eu preciso de dizer que este foi o melhor que eu já provei! Você tem potencial! Vai vender pra caramba aqui por perto!”</span>#
 

@@ -44,7 +44,7 @@ codigo mudarDia(_dia2)
 `.replace(/\n/g,"").split("#")
 
 const alternativoEscolhaDog = `
-Você retorna para a rua da faculdade e apresenta sua proposta de dog de açaí. Os poucos que ousaram provar a receita odiaram, parece que não foi uma boa mistura... De repente, você encontra Márcio que também decide provar seu sanduíche.#
+Você retorna para a rua da faculdade e apresenta sua proposta de dog de açaí. Os poucos que ousaram provar a receita odiaram, parece que não foi uma boa mistura... De repente, você encontra Márcio que também decide provar seu cachorro-quente.#
 <span class="marcio">Márcio: "Que ideia horrível foi essa? Perdeu totalmente a sua identidade!"</span>#
 FIM DE JOGO
 `.replace(/\n/g,"").split("#")
