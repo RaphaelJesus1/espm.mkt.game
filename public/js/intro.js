@@ -45,4 +45,5 @@ Márcio acena e caminha para longe, antes de você ter tempo de dizer adeus. Voc
 <span class="player">“Será mesmo que tenho esse potencial? O que ele quis dizer com Estratégia de Marketing? Preciso saber mais…”</span>#
 
 " Você volta para casa pouco depois, e passa a noite pesquisando sobre Estratégias de Marketing. Se tem algo que pode me ajudar, deve ser isso!#
+codigo mudarDia(_dia1)
 `.replace(/\n/g,"").split("#")

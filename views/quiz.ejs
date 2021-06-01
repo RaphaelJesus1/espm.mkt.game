@@ -54,6 +54,7 @@
 <script type="text/javascript">
     let _diaAtual = [];
     const containerText = $("#text-container")
+    const containerBtn = $("#answer-buttons")
 
     $(function() {
         comecarJogo();
@@ -74,23 +75,56 @@
     }) */
 
     function comecarJogo() {
-        mudarDia(_intro);
-        proximoTexto()
+        mudarDia(_dia1);
     }
 
     function proximoTexto() {
-        // remove o elemento do array e joga no container
-        containerText.html(_diaAtual.shift())
+        try{
+            if(_diaAtual[0].startsWith("codigo")) { // tornar o código funcional
+                let codigo = _diaAtual.shift().replace("codigo", "").trim()
+                let funcao = new Function(codigo)
+                return (funcao())
+            
+            } else { // faz parte da história
+                // remove o elemento do array e joga no container
+                containerText.html(_diaAtual.shift())
+            }
+        } catch(e) {
+            console.log(`Oops, ocorreu um erro: ${e}`)
+        }
     }
 
     containerText.click(() => proximoTexto())
 
-    function mostrarPergunta(questao) {
-        
+    function montarEscolhas(contexto) {
+        limparBotoes()
+        // Criar os botões
+        contexto.html.forEach((info, i) => {
+            let btn = document.createElement("button")
+                btn.type = "button"
+                btn.innerText = info.titulo
+                btn.classList.add(`btn`)
+                btn.classList.add(`btn-${info.cor}`)
+            
+            btn.addEventListener("click", event => {
+                containerText.append(`<span class="player d-block">&gt "${info.frase}"</span>`)
+                // TODO: atribuir valor à variável global
+
+                if(contexto.errada == i + 1) {
+                    mudarArray(contexto.alternativo)
+                } else {
+                    mudarArray(contexto.padrao)
+                }
+                closeQuestions()
+            })
+            containerBtn.append(btn)
+        })
+        openQuestions()
+
     }
 
-    function resetarInstancia() {
-        
+    function limparBotoes() {
+        containerBtn.html("")
     }
 
     function clicouBotao() {
@@ -107,6 +141,12 @@
 
     function mudarDia(novoDia) {
         _diaAtual = novoDia.map((x) => x);
+        proximoTexto();
+    }
+
+    function mudarArray(novaTrilha) {
+        console.log(novaTrilha)
+        _diaAtual = novaTrilha.map((x) => x);
     }
 
     

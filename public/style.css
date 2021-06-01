@@ -27,6 +27,16 @@ bottom: 0;
 width: 100%;
 }
 
+.btn-purple {
+  background-color: var(--purple);
+  color: #fff;
+}
+
+.btn-purple:hover {
+  background-color: #623ca8;
+  color: #fff;
+}
+
 /* -------------------------------------------------------------------------------
 /  -                               CONTAINERS                                    -
 /  -------------------------------------------------------------------------------
