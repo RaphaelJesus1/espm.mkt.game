@@ -2,7 +2,12 @@
 
 <div class="tela-quiz">
     <!-- Imagem FUNDO -->
-    <div id="background-container" class="bg-metro"></div>
+    <div id="background-container" class="bg-metro">
+        <div class="d-flex justify-content-around align-content-end" style="height: 100%;">
+            <img class="limitador img-marcio d-none" src="/img/marcio.png" alt="">
+            <img class="limitador img-supla d-none" src="/img/supla.png" alt="">
+        </div>
+    </div>
 
     <!-- Texto SOBREPOSIÇÃO -->
     <div id="text-container" class="p-3 absolute-bottom">
@@ -59,6 +64,9 @@
     var _nomeJogador = "";
     var _pontuacao = 0;
     var _hotdog, _local, _preco, _promocao;
+
+    const marcio = $(".img-marcio")
+    const supla = $(".img-supla")
 
     $(function() {
         comecarJogo();
@@ -173,18 +181,6 @@
         containerBtn.html("")
     }
 
-    function mudarBg(novoBg) {
-        if(!novoBg.startsWith("bg-")) { // Se não vier como classe css
-            novoBg = novoBg.toLowerCase().replace(/^/, "bg-")
-        }
-        // assíncrono
-        $.when(containerBg.fadeOut(800))
-            .then(function() {
-                containerBg.removeClass()
-                containerBg.addClass(novoBg)
-            }, () => {})
-            .then(function() {containerBg.fadeIn(800)}, () => {})
-    }
 
     function clicouBotao() {
         

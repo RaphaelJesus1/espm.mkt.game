@@ -21,3 +21,31 @@ function openQuestions() {
     document.querySelector(".tela-quiz").style.height = "100vh";
   }
 
+  function mudarBg(novoBg) {
+    if(!novoBg.startsWith("bg-")) { // Se não vier como classe css
+        novoBg = novoBg.toLowerCase().replace(/^/, "bg-")
+    }
+    // assíncrono
+    $.when(containerBg.fadeOut(800))
+        .then(function() {
+            containerBg.removeClass()
+            containerBg.addClass(novoBg)
+        }, () => {})
+        .then(function() {containerBg.fadeIn(800)}, () => {})
+}
+
+function chamarMarcio() {
+  marcio.removeClass("d-none")
+}
+
+function dispensarMarcio() {
+  marcio.addClass("d-none")
+}
+
+function chamarSupla() {
+  supla.removeClass("d-none")
+}
+
+function dispensarSupla() {
+  supla.addClass("d-none")
+}
