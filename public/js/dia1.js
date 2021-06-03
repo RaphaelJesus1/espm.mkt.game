@@ -51,13 +51,14 @@ FIM DE JOGO
 
 const objEscolhaDog = {
     html: [
-        {titulo: "Hot dogs artesanais", cor: "warning", frase:"Vou caprichar em Hot Dogs artesanais. Pode ser mais trabalhoso, mas vai ficar mais gostoso, e essas coisas estão na moda né?"},
-        {titulo: "Dogs congelados", cor: "info", frase:"Se eu ter meus lanches pré-prontos, vou conseguir entregar muito mais rápido"},
-        {titulo: "Dog simples", cor: "danger", frase:"Não vou arriscar. Com um dog simples posso manter minha comida gostosa e consistente."},
-        {titulo: "Dog de açaí", cor: "purple", frase:"Se eu quero criar identidade eu preciso inovar. Vou misturar salsicha com açaí!!"}
+        {titulo: "Hot dogs artesanais", valor:"artesanal", cor: "warning", frase:"Vou caprichar em Hot Dogs artesanais. Pode ser mais trabalhoso, mas vai ficar mais gostoso, e essas coisas estão na moda né?"},
+        {titulo: "Dogs congelados", valor:"congelado", cor: "info", frase:"Se eu ter meus lanches pré-prontos, vou conseguir entregar muito mais rápido"},
+        {titulo: "Dog simples", valor:"simples",cor: "danger", frase:"Não vou arriscar. Com um dog simples posso manter minha comida gostosa e consistente."},
+        {titulo: "Dog de açaí", valor:"açaí",cor: "purple", frase:"Se eu quero criar identidade eu preciso inovar. Vou misturar salsicha com açaí!!"}
     ],
+    variavel: "_hotdog",
     errada: 4,
     padrao: padraoEscolhaDog,
-    alternativo: alternativoEscolhaDog
+    alternativo: alternativoEscolhaDog,
 }
 

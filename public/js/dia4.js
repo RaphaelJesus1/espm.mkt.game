@@ -54,11 +54,12 @@ Márcio sorri e acena para você. Você retribui e analisa tudo que passou nos �
 
 const objEscolhaPromocao = {
     html: [
-        {titulo: "Divulgar no Instagram", cor: "warning", frase:"As redes sociais são a tendência, posso atrair um público bem moderninho!"},
-        {titulo: "Parcerias com estabelecimentos próximos", cor: "info", frase:"Eu posso usar o prestígio dos estabelecimentos daqui ao meu favor!"},
-        {titulo: "Contar sobre o negócio para amigos próximos", cor: "danger", frase:"Não tem ninguém que eu confio mais que meus amigos!"},
-        {titulo: "Distribuir panfletos", cor: "purple", frase:"É uma opção bem barata mas mesmo assim efetiva!"}
+        {titulo: "Divulgar no Instagram", valor:"instagram", cor: "warning", frase:"As redes sociais são a tendência, posso atrair um público bem moderninho!"},
+        {titulo: "Parcerias com estabelecimentos próximos", valor:"parcerias", cor: "info", frase:"Eu posso usar o prestígio dos estabelecimentos daqui ao meu favor!"},
+        {titulo: "Contar sobre o negócio para amigos próximos", valor:"amigos", cor: "danger", frase:"Não tem ninguém que eu confio mais que meus amigos!"},
+        {titulo: "Distribuir panfletos", valor:"panfletos", cor: "purple", frase:"É uma opção bem barata mas mesmo assim efetiva!"}
     ],
+    variavel: "_promocao",
     errada: 3,
     padrao: padraoEscolhaPromocao,
     alternativo: alternativoEscolhaPromocao

@@ -56,7 +56,8 @@
     const containerText = $("#text-container")
     const containerBtn = $("#answer-buttons")
     const containerBg = $("#background-container")
-    var nomeJogador = "";
+    var _nomeJogador = "";
+    var _hotdog, _local, _preco, _promocao;
 
     $(function() {
         comecarJogo();
@@ -77,19 +78,18 @@
     }) */
 
     function comecarJogo() {
-        mudarDia(_dia1);
+        mudarDia(_intro);
     }
 
     function proximoTexto() {
-        try{
-            if(_diaAtual[0].startsWith("codigo")) { // tornar o código funcional
+        try {
+            // remove o elemento do array e joga no container
+            containerText.html(_diaAtual.shift())
+
+            if(_diaAtual[0].trim().startsWith("codigo")) { // o próximo texto é um código
                 let codigo = _diaAtual.shift().replace("codigo", "").trim()
                 let funcao = new Function(codigo)
                 return (funcao())
-            
-            } else { // faz parte da história
-                // remove o elemento do array e joga no container
-                containerText.html(_diaAtual.shift())
             }
         } catch(e) {
             console.log(`Oops, ocorreu um erro: ${e}`)
@@ -98,10 +98,9 @@
 
     containerText.click(() => proximoTexto())
 
-    function montarInput(alvo) {
+    function montarInput(variavel) {
         limparBotoes()
         containerText.off("click")
-        containerText.addClass("disabled")
         let input = document.createElement("input")
         input.id = "inputName"
         input.type = "text"
@@ -120,10 +119,12 @@
         sendBtn.classList.add("btn-secondary")
         sendBtn.innerHTML = "<i class='fas fa-paper-plane'></i>"
         sendBtn.addEventListener("click", event => {
-            eval(alvo + " = " + "'" + input.value + "'")
-            closeQuestions()
-            containerText.append(`<span class="player d-block">&gt "${input.value}"</span>`)
-            containerText.on("click", () => {proximoTexto()})
+            if(input.value != "") { // Só envia inputs preenchidos
+                eval(variavel + " = " + "'" + input.value + "'")
+                closeQuestions()
+                containerText.append(`<span class="player d-block">&gt "${input.value}"</span>`)
+                containerText.on("click", () => {proximoTexto()})
+            }
         })
 
         containerBtn.append(input)
@@ -143,7 +144,7 @@
             
             btn.addEventListener("click", event => {
                 containerText.append(`<span class="player d-block">&gt "${info.frase}"</span>`)
-                // TODO: atribuir valor à variável global
+                eval(`${contexto.variavel} = {texto: '${info.titulo}', valor: '${info.valor}'}`)
 
                 if(contexto.errada == i + 1) {
                     mudarArray(contexto.alternativo)
@@ -163,11 +164,16 @@
     }
 
     function mudarBg(novoBg) {
-        containerBg.fadeOut(800)
-        containerBg.removeClass()
-        containerBg.addClass(novoBg)
-        containerBg.fadeIn(800)
-        //containerBg.fadeTo(1000, 1)
+        if(!novoBg.startsWith("bg-")) { // Se não vier como classe css
+            novoBg = novoBg.toLowerCase().replace(/^/, "bg-")
+        }
+        // assíncrono
+        $.when(containerBg.fadeOut(800))
+            .then(function() {
+                containerBg.removeClass()
+                containerBg.addClass(novoBg)
+            }, () => {})
+            .then(function() {containerBg.fadeIn(800)}, () => {})
     }
 
     function clicouBotao() {
@@ -188,7 +194,6 @@
     }
 
     function mudarArray(novaTrilha) {
-        console.log(novaTrilha)
         _diaAtual = novaTrilha.map((x) => x);
     }
 

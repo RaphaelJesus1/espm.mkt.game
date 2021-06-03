@@ -43,11 +43,12 @@ FIM DE JOGO
 
 const objEscolhaPreco = {
     html: [
-        {titulo: "Melhorar a experiência e aumentar preço", cor: "warning", frase:" Vou decorar o food truck e fazer uma apresentação muito especial. Se meus hotdogs oferecerem uma experiência diferenciada, posso cobrar preços mais altos aqui."},
-        {titulo: "Abaixar custos e preços", cor: "info", frase:"Vou abaixar meus preços e gastos, mesmo que custe abaixar um pouco a qualidade."},
-        {titulo: "Manter os preços", cor: "danger", frase:" Minha proposta será verdadeira. Meu produto é bom e logo vou manter meus preços, não tem porque fingir seu algo que não sou."},
-        {titulo: "Diminuir custos e aumentar preço", cor: "purple", frase:" Posso economizar bastante com meus custos de produção e investir tudo na imagem, assim eu posso subir os preços mesmo assim."}
+        {titulo: "Melhorar a experiência e aumentar preço", valor:"melhorar", cor: "warning", frase:" Vou decorar o food truck e fazer uma apresentação muito especial. Se meus hotdogs oferecerem uma experiência diferenciada, posso cobrar preços mais altos aqui."},
+        {titulo: "Abaixar custos e preços", valor:"abaixar", cor: "info", frase:"Vou abaixar meus preços e gastos, mesmo que custe abaixar um pouco a qualidade."},
+        {titulo: "Manter os preços", valor:"manter", cor: "danger", frase:" Minha proposta será verdadeira. Meu produto é bom e logo vou manter meus preços, não tem porque fingir seu algo que não sou."},
+        {titulo: "Diminuir custos e aumentar preço", valor:"diminuir", cor: "purple", frase:" Posso economizar bastante com meus custos de produção e investir tudo na imagem, assim eu posso subir os preços mesmo assim."}
     ],
+    variavel: "_preco",
     errada: 4,
     padrao: padraoEscolhaPreco,
     alternativo: alternativoEscolhaPreco
