@@ -92,6 +92,8 @@
 
     function proximoTexto() {
         try {
+            // substitui a marcação nome pelo salvo na variável nomeJogador
+            _diaAtual[0] = _diaAtual[0].replace("[nome]", _nomeJogador)
             // remove o elemento do array e joga no container
             containerText.html(_diaAtual.shift())
 

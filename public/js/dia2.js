@@ -27,9 +27,9 @@ Você encontra alguém que lhe parece familiar de costas... Ao se aproximar, a p
 
 <span class="supla">Supla: "Hello! Oi! Tudo bem com você?"</span>#
 
-<span class="player">"Supla! Que surpresa agradável! Sou muito seu fã! Meu nome é <span class="nome"></span></span>"#
+<span class="player">"Supla! Que surpresa agradável! Sou muito seu fã! Meu nome é [nome]</span>"#
 
-<span class="marcio">Supla: "Prazer te conhecer <span class="nome"></span>! O que você se tá procurando? Quer tirar uma picture? Uma foto?"</span>#
+<span class="marcio">Supla: "Prazer te conhecer [nome]! O que você se tá procurando? Quer tirar uma picture? Uma foto?"</span>#
 <span class="player">"Isso seria muito legal! Mas na verdade queria ajuda com uma coisa... Sei que você é um paulistano notório e conhece bem a cidade, não?"</span>#
 
 <span class="supla">Supla: "Sure! O papito aqui adora São Paulo! Tô sem nenhum compromisso e estaria muito grato de ajudar uma fã!"</span>#

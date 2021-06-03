@@ -29,7 +29,7 @@ Você lhe entrega um hotdog e ele dá uma bela mordida, saboreando com enorme en
 <span class="indefinido">???: Meu deus, isso está maravilhoso! Foi você que fez mesmo? Qual é seu nome?</span>#
 
 <span class="player">“Eu me chamo...”</span>#
-codigo montarInput("nomeJogador")#
+codigo montarInput("_nomeJogador")#
 
 <span class="marcio">???: “É um prazer, eu me chamo Márcio. Eu sou professor de marketing naquela faculdade ali de trás. Cachorro-quente é o meu lanche favorito, e eu preciso de dizer que este foi o melhor que eu já provei! Você tem potencial! Vai vender pra caramba aqui por perto!”</span>#
 
@@ -37,7 +37,7 @@ codigo montarInput("nomeJogador")#
 
 Márcio te olha instigado, e dá uma boa olhada no seu caminhãozinho.#
 
-<span class="marcio">Márcio: “É o seu primeiro dia fazendo isso, não é? Nunca te vi por aqui antes. É, nome, você ainda tem muito o que aprender. Para fazer sucesso, não adianta ter uma comida boa, você precisa saber como apresentá-la. Trate esse seu negócio como uma marca, e faça uma Estratégia de Marketing para seu negócio.”</span>#
+<span class="marcio">Márcio: “É o seu primeiro dia fazendo isso, não é? Nunca te vi por aqui antes. É, [nome], você ainda tem muito o que aprender. Para fazer sucesso, não adianta ter uma comida boa, você precisa saber como apresentá-la. Trate esse seu negócio como uma marca, e faça uma Estratégia de Marketing para seu negócio.”</span>#
 
 <span class="marcio">Márcio: “Esse jeito simples mas gostoso de cozinhar é seu diferencial. Mas me parece que é difícil conseguir fazer muita coisa sozinho. Lembre-se, foque nas suas forças para tentar minimizar suas fraquezas. Você vai longe!”</span>#
 
