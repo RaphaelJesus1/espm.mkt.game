@@ -57,6 +57,7 @@
     const containerBtn = $("#answer-buttons")
     const containerBg = $("#background-container")
     var _nomeJogador = "";
+    var _pontuacao = 0;
     var _hotdog, _local, _preco, _promocao;
 
     $(function() {
@@ -88,6 +89,7 @@
 
             if(_diaAtual[0].trim().startsWith("codigo")) { // o próximo texto é um código
                 let codigo = _diaAtual.shift().replace("codigo", "").trim()
+                console.log(codigo)
                 let funcao = new Function(codigo)
                 return (funcao())
             }
@@ -134,6 +136,7 @@
 
     function montarEscolhas(contexto) {
         limparBotoes()
+        containerText.off("click") // Congela o container com o texto atual
         // Criar os botões
         contexto.html.forEach((info, i) => {
             let btn = document.createElement("button")
@@ -142,9 +145,15 @@
                 btn.classList.add(`btn`)
                 btn.classList.add(`btn-${info.cor}`)
             
+            // Ao ser clicado
             btn.addEventListener("click", event => {
                 containerText.append(`<span class="player d-block">&gt "${info.frase}"</span>`)
+                // Salvar em variável
                 eval(`${contexto.variavel} = {texto: '${info.titulo}', valor: '${info.valor}'}`)
+                // Somar na pontuação global
+                if(info.pontos) {
+                    _pontuacao += parseInt( info.pontos[eval(contexto.varPontos).valor] )
+                }
 
                 if(contexto.errada == i + 1) {
                     mudarArray(contexto.alternativo)
@@ -152,6 +161,7 @@
                     mudarArray(contexto.padrao)
                 }
                 closeQuestions()
+                containerText.on("click", () => {proximoTexto()}) // Voltar o clique na caixa de texto
             })
             containerBtn.append(btn)
         })

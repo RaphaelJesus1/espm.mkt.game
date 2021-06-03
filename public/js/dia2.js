@@ -85,12 +85,13 @@ codigo mudarDia(_dia3)
 
 const objEscolhaLocal = {
     html: [
-        {titulo: "Embaixo da Ponte", valor:"ponte", cor: "warning", frase:"Gostei da ideia da ponte! Um grande cartão postal para uma grande ideia!"},
-        {titulo: "Metrô", valor:"metro", cor: "info", frase:"O metrô! Vou prosperar com toda a movimentação do lugar!"},
-        {titulo: "Parque Gastronômico", valor:"parque", cor: "danger", frase:"Acredito que meu produto combine bem com o local do Parque Gastronomico"},
+        {titulo: "Embaixo da Ponte", valor:"ponte", cor: "warning", pontos:{artesanal:1,congelado:-1,simples:0}, frase:"Gostei da ideia da ponte! Um grande cartão postal para uma grande ideia!"},
+        {titulo: "Metrô", valor:"metro", cor: "info", pontos:{artesanal:-1,congelado:1,simples:0}, frase:"O metrô! Vou prosperar com toda a movimentação do lugar!"},
+        {titulo: "Parque Gastronômico", valor:"parque", cor: "danger", pontos:{artesanal:0,congelado:-1,simples:1}, frase:"Acredito que meu produto combine bem com o local do Parque Gastronomico"},
         {titulo: "Faculdade", valor:"facul", cor: "purple", frase:"Perto da faculdade me sinto confortável! Muitos irão vir comer depois das aulas!"}
     ],
     variavel: "_local",
+    varPontos: "_hotdog",
     errada: 1,
     padrao: padraoEscolhaLocal,
     alternativo: alternativoEscolhaLocal
