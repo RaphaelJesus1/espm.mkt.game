@@ -65,6 +65,8 @@
 <script type="text/javascript" src="/js/dia2.js"></script>
 <script type="text/javascript" src="/js/dia3.js"></script>
 <script type="text/javascript" src="/js/dia4.js"></script>
+<script type="text/javascript" src="/js/gameover.js"></script>
+<script type="text/javascript" src="/js/transicaoDia.js"></script>
 
 
 <script type="text/javascript">
@@ -215,6 +217,9 @@
     function mudarDia(novoDia) {
         _diaAtual = novoDia.map((x) => x);
         proximoTexto();
+    }
+    function gameover() {
+       mudarDia(gameover);
     }
 
     function mudarArray(novaTrilha) {

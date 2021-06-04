@@ -12,6 +12,8 @@ const alternativoEscolhaPromocao = `
 codigo concatenaOpcao('btnPromocao',_promocao.texto )#
 Você dedica um bom tempo divulgando para os seus amigos próximos. Mesmo que eles sejam clientes fiéis, isso não aumentou muito o público do seu negócio, e com tempo até mesmo seus amigos vão aparecendo menos e menos. O dinheiro vai ficando apertando, todo dia o prejuízo vai aumentando, até que você não consegue mais se manter. Seu food truck fracassa.#
 FIM DE JOGO
+
+codigo gameover()#
 `.replace(/\n/g,"").split("#")
 
 

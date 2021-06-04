@@ -41,7 +41,21 @@ width: 100%;
 .limitador {
   max-width: 100%;
 }
-
+.txtDia{
+  position: absolute;
+  top:42%; 
+  left:45%;
+  font-size: 80px;
+  color: white;
+ }
+ .txtGM{
+  position: absolute;
+  top:42%; 
+  left:32%;
+  font-size: 80px;
+  color: white;
+  font-weight: 700;
+ }
 /* -------------------------------------------------------------------------------
 /  -                               CONTAINERS                                    -
 /  -------------------------------------------------------------------------------
@@ -52,7 +66,11 @@ width: 100%;
   background-position: center center;
   background-size: cover;
 }
-
+.bg-preto{
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+}
 #background-container {
   height: 100%;
   background-repeat: no-repeat;
@@ -217,6 +235,7 @@ width: 100%;
 .abasDir{
   right:0; 
 }
+
 
 /* -------------------------------------------------------------------------------
 /  -                                ANIMAÇÕES                                    -

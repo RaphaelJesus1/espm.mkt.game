@@ -34,6 +34,12 @@ app.get("/quiz", wrap(async (req, res) => {
     //res.render("quiz", { lista: lista });
     res.render("quiz");
 }));
+app.get("/transicao", wrap(async (req, res) => {
+    res.render("transicaoDia");
+}));
+app.get("/gameover", wrap(async (req, res) => {
+    res.render("gameover");
+}));
 // ------------------------------------------------------
 
 app.listen(1337, () => {
