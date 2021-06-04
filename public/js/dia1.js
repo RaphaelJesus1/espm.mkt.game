@@ -32,9 +32,11 @@ Márcio acena e sai enquanto come seu hot dog. Hoje o dia foi bem melhor, mas ai
 
 const padraoEscolhaDog = `
 Você decora seu caminhãozinho especificamente como um foodtruck de hotdog e vai até seu local de venda. Dessa vez, muitas pessoas tiveram seu interesse despertado e pararam para provar, e a recepção foi boa! Na hora do almoço, entre a multidão aparece um rosto familiar, o professor Márcio. Ele para para pegar um hotdog.#
+codigo concatenaOpcao('btnProduto',_hotdog.texto )#
 
 codigo chamarMarcio()#
-<span class="marcio">Márcio: "[nome], me parece que você realmente andou estudando. Seu caminhãozinho já está mostrando uma proposta mais clara. <span>SE ESCOLHEU ARTESANAL: E esses hotdogs artesanais são uma ótima idéia, você analisou suas forças e fraquezas perfeitamente!</span>#
+<span class="marcio">Márcio: "[nome], me parece que você realmente andou estudando. Seu caminhãozinho já está mostrando uma proposta mais clara. #
+codigo concatenaDog()#
 
 <span class="marcio">Márcio: "Agora sugiro você pensar em oportunidades e ameaças. Por exemplo, que localização de venda pode ser mais promissora ou arriscada?" Isso tudo é muito importante quando se planeja uma marca. Isso se chama análise SWOT: elencar suas forças, fraquezas, oportunidades e ameaças."</span>#
 
@@ -46,6 +48,8 @@ codigo mudarDia(_dia2)#
 `.replace(/\n/g,"").split("#")
 
 const alternativoEscolhaDog = `
+...#
+codigo concatenaOpcao('btnProduto',_hotdog.texto )#
 Você retorna para a rua da faculdade e apresenta sua proposta de dog de açaí. Os poucos que ousaram provar a receita odiaram, parece que não foi uma boa mistura... De repente, você encontra Márcio que também decide provar seu cachorro-quente.#
 <span class="marcio">Márcio: "Que ideia horrível foi essa? Perdeu totalmente a sua identidade!"</span>#
 codigo chamarMarcio()#
@@ -63,5 +67,12 @@ const objEscolhaDog = {
     errada: 4,
     padrao: padraoEscolhaDog,
     alternativo: alternativoEscolhaDog,
+}
+
+
+function concatenaDog(){
+    if(_hotdog.texto=="Hot dogs artesanais"){
+        containerText.html("E esses hotdogs artesanais são uma ótima idéia, você analisou suas forças e fraquezas perfeitamente!");
+    }
 }
 

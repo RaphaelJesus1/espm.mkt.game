@@ -5,15 +5,16 @@
         <button type="button" class="btn" onclick="openNav('concNav')">C</button>
         <button type="button" class="btn" onclick="openNav('ambiNav')">A</button>
     </div> -->
-    <button class="btn btn-dark abas abasEsq" style="top:30%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Forças" data-bs-content="Forças blablabla" >S</button>
-    <button class="btn btn-dark abas abasEsq" style="top:38%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right"  title="Fraquezas"  data-bs-content="Right popover">W</button>
-    <button class="btn btn-dark abas abasEsq" style="top:46%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Oportunidades" data-bs-content="Right popover">O</button>
-    <button class="btn btn-dark abas abasEsq" style="top:54%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Ameaças" data-bs-content="Ameaças">T</button>
+    <button class="btn btn-dark abas abasEsq" style="top:30%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Forças/Strengths" data-bs-content="Atributos internos positivos da empresa" >S</button>
+    <button class="btn btn-dark abas abasEsq" style="top:38%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right"  title="Fraquezas/Weaknesses"  data-bs-content="Atributos internos negativos da empresa, que prejudicam os pontos fortes">W</button>
+    <button class="btn btn-dark abas abasEsq" style="top:46%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Oportunidades/Opportunities" data-bs-content="Fatores externos que poderão contribuir para o sucesso da empresa">O</button>
+    <button class="btn btn-dark abas abasEsq" style="top:54%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right" title="Ameaças/Threats" data-bs-content="Fatores externos que acabam dificultando o sucesso da empresa">T</button>
 
-    <button class="btn btn-dark abas abasDir" style="top:30%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Público-alvo" data-bs-content="blablablablabla" ><i class="fas fa-user-friends"></i></button>
-    <button class="btn btn-dark abas abasDir" style="top:38%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Local" data-bs-content="blablablablablablablabla"  ><i class="fas fa-map-marker-alt"></i></button>
-    <button class="btn btn-dark abas abasDir" style="top:46%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Alimento Vendido" data-bs-content="blablablablablablablabla"  ><i class="fas fa-hotdog"></i></button>
-    <button class="btn btn-dark abas abasDir" style="top:54%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Concorrência" data-bs-content="blablablablablablablabla"  ><i class="fas fa-hand-holding-usd"></i></button>
+    
+    <button id="btnProduto" class="btn btn-dark abas abasDir" style="top:30%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Alimento Vendido" data-bs-content="Qual tipo de hotdog seu foodtruck irá vender"  ><i class="fas fa-hotdog"></i></button>
+    <button id="btnLocal" class="btn btn-dark abas abasDir" style="top:38%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Local" data-bs-content="Localização escolhida para o foodtruck"  ><i class="fas fa-map-marker-alt"></i></button>
+    <button id="btnPreco" class="btn btn-dark abas abasDir" style="top:46%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Preço e Valor" data-bs-content="Simboliza o equilíbrio entre preço e entrega de valor para o cliente." ><i class="fas fa-dollar-sign"></i></button>
+    <button id="btnPromocao" class="btn btn-dark abas abasDir" style="top:54%;" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="left" title="Promoção" data-bs-content="Representa as estratégias adotadas para promover o seu produto."  ><i class="fas fa-hand-holding-usd"></i></button>
 
      <!-- Tab panes -->
      <!-- <div id="swotNav" class="sidenav">
@@ -24,12 +25,23 @@
         <a href="#">Contact</a>
       </div> -->
 
-      <script>
-        $(document).ready(function(){
-          $('[data-bs-toggle="popover"]').popover();
-        });
-        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-            trigger: 'focus'
-        })
-      </script>
+<script>
+  $(document).ready(function(){
+    $('[data-bs-toggle="popover"]').popover();
+  });
+  var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+      trigger: 'focus'
+  })
+
+  function concatenaOpcao(botao,texto){
+    var destino = document.getElementById(botao);
+    var textoAntigo = destino.getAttribute('data-bs-content');
+  
+    textoAntigo = textoAntigo + ". Escolhido: "+ texto;
+    destino.setAttribute('data-bs-content', textoAntigo);
+  };
+
+
+  
+</script>
       

@@ -63,9 +63,12 @@ codigo dispensarSupla()#
 
 
 const alternativoEscolhaLocal = `
+    ...#
+   codigo concatenaOpcao('btnLocal',_local.texto )#
     Você move para abaixo da ponte. A falta de visibilidade do local atrapalha muito os negócios, o trânsito barulhento
     e estressante não atrai clientes. Além do péssimo cheiro do rio.#
     codigo mudarBg("bg-ponte")#
+    
 
     Bem que o Supla sentiu um cheiro estranho, e infelizmente não era o grande sucess que pensava que era.#
     
@@ -76,6 +79,8 @@ const alternativoEscolhaLocal = `
 
 const padraoEscolhaLocal = `
     codigo dispensarSupla()#
+    ...#
+    codigo concatenaOpcao('btnLocal',_local.texto )#
     Você move seu food truck para o local escolhido.#
     codigo mudarBg(_local.valor)#
     Supla te visita e pede um de seus hot dogs.#

@@ -8,12 +8,17 @@ codigo montarEscolhas(objEscolhaPromocao)
 
 
 const alternativoEscolhaPromocao = `
+...#
+codigo concatenaOpcao('btnPromocao',_promocao.texto )#
 Você dedica um bom tempo divulgando para os seus amigos próximos. Mesmo que eles sejam clientes fiéis, isso não aumentou muito o público do seu negócio, e com tempo até mesmo seus amigos vão aparecendo menos e menos. O dinheiro vai ficando apertando, todo dia o prejuízo vai aumentando, até que você não consegue mais se manter. Seu food truck fracassa.#
 FIM DE JOGO
 `.replace(/\n/g,"").split("#")
 
 
 const padraoEscolhaPromocao = `
+...#
+codigo concatenaGremio()#
+codigo concatenaOpcao('btnPromocao',_promocao.texto )#
 Durante os próximos dias, parece que sua promoção teve resultado, mas é necessario mais algum tempo para analisar realmente quanto sucesso suas escolhas te trouxeram.#
 ...#
 Após terminar de atender um cliente, um rosto familiar vêm à frente. É o professor Márcio. Ele pede um cachorro quente como fez naqueles dois primeiros dias quando o conheceu. Ele parece impressionado com a fila que vê.#
@@ -43,13 +48,12 @@ Márcio sorri e acena para você. Você retribui e analisa tudo que passou nos �
 
 `.replace(/\n/g,"").split("#")
 
-// const escolhaDia2 = "Faculdade";
-// const escolhaDia4 = "Divulgar no Instagram";
 
-// if(escolhaDia2=="Faculdade"&& escolhaDia4 =="Divulgar no Instagram"){
-//     padraoEscolhaPromocao.concat(" Você conversa com o grêmio da faculdade e vocês acordam em um desconto para os estudantes. Considerando que é um público regular durante todos os dias da semana, isso lhe garante uma estabilidade nas vendas que assegura a manutenção do seu foodtruck.")
-// }
-
+function concatenaGremio(){
+    if(_local.texto=="Faculdade" && _promocao.texto =="Divulgar no Instagram"){
+        containerText.html("Você conversa com o grêmio da faculdade e vocês acordam em um desconto para os estudantes. Considerando que é um público regular durante todos os dias da semana, isso lhe garante uma estabilidade nas vendas que assegura a manutenção do seu foodtruck.");
+    }
+}
 
 
 const objEscolhaPromocao = {
@@ -64,3 +68,4 @@ const objEscolhaPromocao = {
     padrao: padraoEscolhaPromocao,
     alternativo: alternativoEscolhaPromocao
 }
+
