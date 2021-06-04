@@ -26,37 +26,37 @@ Após isso você decide procurar alguém que pode lhe dar dicas de locais para v
 Você encontra alguém que lhe parece familiar de costas... Ao se aproximar, a pessoa vira revelando ser:#
 
 codigo chamarSupla()#
-<span class="supla">Supla: "Hello! Oi! Tudo bem com você?"</span>#
+<span class="balao supla">Supla: "Hello! Oi! Tudo bem com você?"</span>#
 
 <span class="player">"Supla! Que surpresa agradável! Sou muito seu fã! Meu nome é [nome]</span>"#
 
-<span class="marcio">Supla: "Prazer te conhecer [nome]! O que você se tá procurando? Quer tirar uma picture? Uma foto?"</span>#
+<span class="balao supla">Supla: "Prazer te conhecer [nome]! O que você se tá procurando? Quer tirar uma picture? Uma foto?"</span>#
 <span class="player">"Isso seria muito legal! Mas na verdade queria ajuda com uma coisa... Sei que você é um paulistano notório e conhece bem a cidade, não?"</span>#
 
-<span class="supla">Supla: "Sure! O papito aqui adora São Paulo! Tô sem nenhum compromisso e estaria muito grato de ajudar uma fã!"</span>#
+<span class="balao supla">Supla: "Sure! O papito aqui adora São Paulo! Tô sem nenhum compromisso e estaria muito grato de ajudar uma fã!"</span>#
 Você mostra o papel onde deixou suas anotações, e explica seu problema para o Supla.#
 
-<span class="supla">Supla: "Now that's a problem. Eu conheço lugares muuuuito maneiros pra seu negócio! Partiu? C'mon, vamos!"</span>#
+<span class="balao supla">Supla: "Now that's a problem. Eu conheço lugares muuuuito maneiros pra seu negócio! Partiu? C'mon, vamos!"</span>#
 Você segue Supla para os locais que ele pensou.#
 
 (Chega no parque gastronomico)<br>
-<span class="supla">Supla: "Esse é um Parque Gastronômico bem chique! Muitos aqui pagam bem e gostam de take good pictures pra postar nas redes!"</span>#
+<span class="balao supla">Supla: "Esse é um Parque Gastronômico bem chique! Muitos aqui pagam bem e gostam de take good pictures pra postar nas redes!"</span>#
 codigo mudarBg("bg-parque")#
 
 (Chega no metrô ana rosa)<br>
-<span class="supla">Supla: "Aqui é o caminho pro metrô. O povo pode curtir comer one good hot dog aqui, a pressa da fome e algo rápido e barato ajuda muito nessas horas!"</span>#
+<span class="balao supla">Supla: "Aqui é o caminho pro metrô. O povo pode curtir comer one good hot dog aqui, a pressa da fome e algo rápido e barato ajuda muito nessas horas!"</span>#
 codigo mudarBg("bg-metro")#
 
 (Chega embaixo da ponte estaiada)<br>
-<span class="supla">Supla: "Um grande marco a ponte estaiada, I smell sucess! Sinto cheiro do sucesso! E também do pobre rio Pinheiros... Aqui vem uma galera comer"</span>#
+<span class="balao supla">Supla: "Um grande marco a ponte estaiada, I smell sucess! Sinto cheiro do sucesso! E também do pobre rio Pinheiros... Aqui vem uma galera comer"</span>#
 codigo mudarBg("bg-ponte")#
 
 (Chega perto da ESPM)<br>
-<span class="supla">Supla: "Hey! E aqui é perto de onde você já tava, não? Os alunos vão cair pelos seus hotdogs! Vão sempre querer!"</span>#
+<span class="balao supla">Supla: "Hey! E aqui é perto de onde você já tava, não? Os alunos vão cair pelos seus hotdogs! Vão sempre querer!"</span>#
 codigo mudarBg("bg-facul")#
 
 Supla para, tira uma foto com você e agradece sua confiança nele.#
-<span class="supla">Supla: "Então? O que vai ser? What's your decision? Qual sua decisão?"</span>#
+<span class="balao supla">Supla: "Então? O que vai ser? What's your decision? Qual sua decisão?"</span>#
 codigo montarEscolhas(objEscolhaLocal)#
 codigo dispensarSupla()#
 `.replace(/\n/g,"").split("#")
@@ -85,7 +85,7 @@ const padraoEscolhaLocal = `
     codigo mudarBg(_local.valor)#
     Supla te visita e pede um de seus hot dogs.#
     codigo chamarSupla()#
-    <span class="supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte <span id="nome"></span>!</span>"#
+    <span class="balao supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte <span id="nome"></span>!</span>"#
     Você agradece Supla e depois de trabalhar volta para casa sabendo que sua jornada de marketeiro ainda não acabou.#
     codigo dispensarSupla()#
 

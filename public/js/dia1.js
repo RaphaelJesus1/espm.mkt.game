@@ -35,10 +35,10 @@ Você decora seu caminhãozinho especificamente como um foodtruck de hotdog e va
 codigo concatenaOpcao('btnProduto',_hotdog.texto )#
 
 codigo chamarMarcio()#
-<span class="marcio">Márcio: "[nome], me parece que você realmente andou estudando. Seu caminhãozinho já está mostrando uma proposta mais clara. #
+<span class="balao marcio">Márcio: "[nome], me parece que você realmente andou estudando. Seu caminhãozinho já está mostrando uma proposta mais clara. #
 codigo concatenaDog()#
 
-<span class="marcio">Márcio: "Agora sugiro você pensar em oportunidades e ameaças. Por exemplo, que localização de venda pode ser mais promissora ou arriscada?" Isso tudo é muito importante quando se planeja uma marca. Isso se chama análise SWOT: elencar suas forças, fraquezas, oportunidades e ameaças."</span>#
+<span class="balao marcio">Márcio: "Agora sugiro você pensar em oportunidades e ameaças. Por exemplo, que localização de venda pode ser mais promissora ou arriscada?" Isso tudo é muito importante quando se planeja uma marca. Isso se chama análise SWOT: elencar suas forças, fraquezas, oportunidades e ameaças."</span>#
 
 <span class="player">"Ah, obrigado Márcio. Vou pensar nisso!"</span>#
 
@@ -51,7 +51,7 @@ const alternativoEscolhaDog = `
 ...#
 codigo concatenaOpcao('btnProduto',_hotdog.texto )#
 Você retorna para a rua da faculdade e apresenta sua proposta de dog de açaí. Os poucos que ousaram provar a receita odiaram, parece que não foi uma boa mistura... De repente, você encontra Márcio que também decide provar seu cachorro-quente.#
-<span class="marcio">Márcio: "Que ideia horrível foi essa? Perdeu totalmente a sua identidade!"</span>#
+<span class="balao marcio">Márcio: "Que ideia horrível foi essa? Perdeu totalmente a sua identidade!"</span>#
 codigo chamarMarcio()#
 FIM DE JOGO
 `.replace(/\n/g,"").split("#")

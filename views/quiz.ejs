@@ -9,11 +9,17 @@
         </div>
     </div>
 
+    <!-- Balão de diálogo -->
+    <div id="balao-container">
+        
+    </div>
+
     <!-- Texto SOBREPOSIÇÃO -->
     <div id="text-container" class="p-3 absolute-bottom">
         <p class="text-center">O texto das perguntas deve ser inserido aqui!</p>
     </div>
 
+    
         
     <!-- Resultado -->
     <div id="result-container" class="d-none">
@@ -49,6 +55,11 @@
     </div>
 </div>
 
+<style>
+    
+    
+</style>
+
 <script type="text/javascript" src="/js/intro.js"></script>
 <script type="text/javascript" src="/js/dia1.js"></script>
 <script type="text/javascript" src="/js/dia2.js"></script>
@@ -59,6 +70,7 @@
 <script type="text/javascript">
     let _diaAtual = [];
     const containerText = $("#text-container")
+    const containerBalao = $('#balao-container')
     const containerBtn = $("#answer-buttons")
     const containerBg = $("#background-container")
     var _nomeJogador = "";
@@ -109,10 +121,12 @@
     }
 
     containerText.click(() => proximoTexto())
+    containerBalao.click(() => proximoTexto())
 
     function montarInput(variavel) {
         limparBotoes()
         containerText.off("click")
+        containerBalao.off("click")
         let input = document.createElement("input")
         input.id = "inputName"
         input.type = "text"
@@ -136,6 +150,8 @@
                 closeQuestions()
                 containerText.append(`<span class="player d-block">&gt "${input.value}"</span>`)
                 containerText.on("click", () => {proximoTexto()})
+                // containerBalao.append(`<span class="player d-block">&gt "${input.value}"</span>`)
+                // containerBalao.on("click", () => {proximoTexto()})
             }
         })
 

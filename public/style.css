@@ -64,6 +64,7 @@ width: 100%;
     max-height: 200px;
     position: absolute;
     background-color: #111a;
+    text-align: center;
     color: #fff;
     cursor: pointer;
 }
@@ -75,6 +76,53 @@ width: 100%;
 #answer-buttons button{
   margin: 10px 15px;
   flex-grow: 1;
+}
+
+
+/*--------------------------------------------------------------------------
+  -                          BALÕES DE DIÁLOGO                             -
+  --------------------------------------------------------------------------
+*/
+
+.balao{
+  background:#fafafa; 
+  padding:16px 4%; 
+  text-align: center;
+  position: fixed;
+  border-radius: 10px; 
+  top:70%; 
+  left:25%; 
+  width:50%; 
+  color: rgb(36, 36, 36);
+}
+
+.balao:before{ 
+  content:''; 
+  position: absolute; 
+  width:30px; 
+  height:30px; 
+  left:50%; 
+  top:-10px; 
+  background:#fafafa; 
+  -webkit-transform:rotate(45deg); 
+}
+
+.marcio{
+  background: rgb(192, 53, 53);
+  color: #fff;
+}
+
+.marcio:before{
+  background: rgb(192, 53, 53);
+}
+
+.supla{
+  background: rgb(129, 23, 143);
+  color: #fff;
+}
+
+.supla:before{
+  background: rgb(129, 23, 143);
 }
 
 /*--------------------------------------------------------------------------
