@@ -169,3 +169,37 @@ width: 100%;
 .abasDir{
   right:0; 
 }
+
+/* -------------------------------------------------------------------------------
+/  -                                ANIMAÇÕES                                    -
+/  -------------------------------------------------------------------------------
+*/
+.animate-chegar {
+  animation: slide-right 2s cubic-bezier(0.250, 0.460, 0.450, 1) both;
+}
+
+.animate-sair {
+  animation: slide-out-right 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-1500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}

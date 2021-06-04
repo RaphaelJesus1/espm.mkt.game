@@ -36,16 +36,23 @@ function openQuestions() {
 
 function chamarMarcio() {
   marcio.removeClass("d-none")
+  marcio.addClass("animate-chegar")
+  setTimeout(function() {marcio.removeClass("animate-chegar")}, 2100) // remover a classe dps de acabar o efeito
+  // pra não conflitar com a animação de saída mais tarde.
 }
 
 function dispensarMarcio() {
-  marcio.addClass("d-none")
+  marcio.addClass("animate-sair")
+  setTimeout(function() {marcio.addClass("d-none"); marcio.removeClass("animate-sair");}, 2100)
 }
 
 function chamarSupla() {
   supla.removeClass("d-none")
+  supla.addClass("animate-chegar")
+  setTimeout(function() {supla.removeClass("animate-chegar")}, 2100)
 }
 
 function dispensarSupla() {
-  supla.addClass("d-none")
+  supla.addClass("animate-sair")
+  setTimeout(function() {supla.addClass("d-none"); supla.removeClass("animate-sair");}, 2100)
 }

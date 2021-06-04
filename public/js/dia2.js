@@ -25,6 +25,7 @@ fáceis de serem comidos a caminho de casa.#
 Após isso você decide procurar alguém que pode lhe dar dicas de locais para vender seus produtos.#
 Você encontra alguém que lhe parece familiar de costas... Ao se aproximar, a pessoa vira revelando ser:#
 
+codigo chamarSupla()#
 <span class="supla">Supla: "Hello! Oi! Tudo bem com você?"</span>#
 
 <span class="player">"Supla! Que surpresa agradável! Sou muito seu fã! Meu nome é [nome]</span>"#
@@ -56,7 +57,8 @@ codigo mudarBg("bg-facul")#
 
 Supla para, tira uma foto com você e agradece sua confiança nele.#
 <span class="supla">Supla: "Então? O que vai ser? What's your decision? Qual sua decisão?"</span>#
-codigo montarEscolhas(objEscolhaLocal)
+codigo montarEscolhas(objEscolhaLocal)#
+codigo dispensarSupla()#
 `.replace(/\n/g,"").split("#")
 
 
@@ -73,11 +75,14 @@ const alternativoEscolhaLocal = `
 `.replace(/\n/g,"").split("#")
 
 const padraoEscolhaLocal = `
+    codigo dispensarSupla()#
     Você move seu food truck para o local escolhido.#
     codigo mudarBg(_local.valor)#
     Supla te visita e pede um de seus hot dogs.#
+    codigo chamarSupla()#
     <span class="supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte <span id="nome"></span>!</span>"#
     Você agradece Supla e depois de trabalhar volta para casa sabendo que sua jornada de marketeiro ainda não acabou.#
+    codigo dispensarSupla()#
 
 codigo mudarDia(_dia3)
 `.replace(/\n/g,"").split("#")

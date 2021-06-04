@@ -97,11 +97,11 @@
             // remove o elemento do array e joga no container
             containerText.html(_diaAtual.shift())
 
-            if(_diaAtual[0].trim().startsWith("codigo")) { // o próximo texto é um código
+            while(_diaAtual[0].trim().startsWith("codigo")) { // o próximo texto é um código
                 let codigo = _diaAtual.shift().replace("codigo", "").trim()
                 console.log(codigo)
                 let funcao = new Function(codigo)
-                return (funcao())
+                funcao()
             }
         } catch(e) {
             console.log(`Oops, ocorreu um erro: ${e}`)

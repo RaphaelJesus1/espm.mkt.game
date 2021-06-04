@@ -15,6 +15,7 @@ Você passa a tarde toda ao dispor de potenciais clientes que estejam caminhando
 
 Está chegando no fim da tarde, e o sol já está dourando os prédios. Já faz um tempo que não passa ninguém pela rua, então você está pensando em dar o fora. Até que um sujeito sai de dentro da faculdade lá na outra quadra. Ele olha para seu caminhão, e vira a rua para te encontrar.#
 
+codigo chamarMarcio()#
 <span class="indefinido">???: “Opa, tudo bem? Isso são lanches que você está vendendo aí?”</span>#
 
 <span class="player">“Hã? Ah, são sim senhor! Vai querer alguma coisa?”</span>#
@@ -42,6 +43,7 @@ Márcio te olha instigado, e dá uma boa olhada no seu caminhãozinho.#
 <span class="marcio">Márcio: “Esse jeito simples mas gostoso de cozinhar é seu diferencial. Mas me parece que é difícil conseguir fazer muita coisa sozinho. Lembre-se, foque nas suas forças para tentar minimizar suas fraquezas. Você vai longe!”</span>#
 
 Márcio acena e caminha para longe, antes de você ter tempo de dizer adeus. Você acena de volta, mas ele já está cruzando a esquina. Esse encontro foi realmente muito estranho…#
+codigo dispensarMarcio()#
 	
 <span class="player">“Será mesmo que tenho esse potencial? O que ele quis dizer com Estratégia de Marketing? Preciso saber mais…”</span>#
 
