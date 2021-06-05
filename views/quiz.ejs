@@ -120,8 +120,13 @@
             while(_diaAtual[0].trim().startsWith("codigo")) { // o próximo texto é um código
                 let codigo = _diaAtual.shift().replace("codigo", "").trim()
                 console.log(codigo)
-                let funcao = new Function(codigo)
-                funcao()
+                let funcao = new Function("return "+codigo)
+                // substitui o [valor] dentro de uma string se houver
+                if(containerText.html().includes("[valor]")){
+                    containerText.html(containerText.html().replace("[valor]", funcao))
+                } else {
+                    funcao()
+                }
             }
         } catch(e) {
             console.log(`Oops, ocorreu um erro: ${e}`)

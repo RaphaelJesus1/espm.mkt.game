@@ -34,9 +34,9 @@ const padraoEscolhaDog = `
 Você decora seu caminhãozinho especificamente como um foodtruck de hotdog e vai até seu local de venda. Dessa vez, muitas pessoas tiveram seu interesse despertado e pararam para provar, e a recepção foi boa! Na hora do almoço, entre a multidão aparece um rosto familiar, o professor Márcio. Ele para para pegar um hotdog.#
 codigo concatenaOpcao('btnProduto',_hotdog.texto )#
 
-codigo chamarMarcio()#
-<span class="balao marcio">Márcio: "[nome], me parece que você realmente andou estudando. Seu caminhãozinho já está mostrando uma proposta mais clara. #
+<span class="balao marcio">Márcio: "[nome], me parece que você realmente andou estudando. Seu caminhãozinho já está mostrando uma proposta mais clara. [valor]"# 
 codigo concatenaDog()#
+codigo chamarMarcio()#
 
 <span class="balao marcio">Márcio: "Agora sugiro você pensar em oportunidades e ameaças. Por exemplo, que localização de venda pode ser mais promissora ou arriscada?" Isso tudo é muito importante quando se planeja uma marca. Isso se chama análise SWOT: elencar suas forças, fraquezas, oportunidades e ameaças."</span>#
 
@@ -74,7 +74,8 @@ const objEscolhaDog = {
 
 function concatenaDog(){
     if(_hotdog.texto=="Hot dogs artesanais"){
-        containerText.html("E esses hotdogs artesanais são uma ótima idéia, você analisou suas forças e fraquezas perfeitamente!");
+        return "E esses hotdogs artesanais são uma ótima idéia, você analisou suas forças e fraquezas perfeitamente!"
     }
+    return ""
 }
 
