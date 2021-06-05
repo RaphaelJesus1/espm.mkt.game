@@ -21,7 +21,7 @@
 
     
         
-    <!-- Resultado -->
+    <!-- Tela FINAL -->
     <div id="result-container" class="d-none">
         <div class="t-quiz h1">RESULTADO</div>
         <div class="my-3">
@@ -34,12 +34,10 @@
         </div>
     </div>
 
-    <!-- Erro -->
-    <div id="error-container" class="text-center d-none">
-        <div class="t-quiz h1">OPS...</div>
-        <div>
-            <img width=25% alt="nome sabonete" src="https://weakwifisolutions.com/wp-content/uploads/2019/08/error-red-cross-1.png?ezimgfmt=rs:372x372/rscb2/ng:webp/ngcb2"/>
-            <div class="h2">Desculpa, o seu resultado não foi encontrado. Por favor, tente novamente.</div>
+    <!-- Tela GAMEOVER -->
+    <div class="bg-preto d-none">
+        <div class="container" >
+            <h1 class="txtGM">GAME OVER</h1>
         </div>
     </div>
 
@@ -55,6 +53,14 @@
     </div>
 </div>
 
+<!-- Transição DIA/NOITE -->
+<div id="daycicle-container" class="bg-preto">
+    <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100%;">
+        <h1 id="txtDia" class="txtDia"></h1>
+        <img class="" src="/img/sol.gif" alt="">
+    </div>
+</div>
+
 <style>
     
     
@@ -65,16 +71,16 @@
 <script type="text/javascript" src="/js/dia2.js"></script>
 <script type="text/javascript" src="/js/dia3.js"></script>
 <script type="text/javascript" src="/js/dia4.js"></script>
-<script type="text/javascript" src="/js/gameover.js"></script>
-<script type="text/javascript" src="/js/transicaoDia.js"></script>
 
 
 <script type="text/javascript">
     let _diaAtual = [];
+    let _dia = -1;
     const containerText = $("#text-container")
     const containerBalao = $('#balao-container')
     const containerBtn = $("#answer-buttons")
     const containerBg = $("#background-container")
+    const containerDaycicle = $("#daycicle-container")
     var _nomeJogador = "";
     var _pontuacao = 0;
     var _hotdog, _local, _preco, _promocao;
@@ -101,7 +107,7 @@
     }) */
 
     function comecarJogo() {
-        mudarDia(_intro);
+        mudarDia(_intro, "introdução");
     }
 
     function proximoTexto() {
@@ -214,9 +220,12 @@
         
     }
 
-    function mudarDia(novoDia) {
+    function mudarDia(novoDia, nomeDia = "") {
         _diaAtual = novoDia.map((x) => x);
-        proximoTexto();
+        _dia++
+        $("#txtDia").text((nomeDia.toUpperCase()||`DIA ${_dia}`));
+        $.when(animacaoMudarDia())
+           .then(proximoTexto());
     }
     function gameover() {
        mudarDia(gameover);

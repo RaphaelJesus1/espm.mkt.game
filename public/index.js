@@ -56,3 +56,8 @@ function dispensarSupla() {
   supla.addClass("animate-sair")
   setTimeout(function() {supla.addClass("d-none"); supla.removeClass("animate-sair");}, 2100)
 }
+
+function animacaoMudarDia() {
+  containerDaycicle.fadeIn(800)
+  setTimeout(function(){ containerDaycicle.fadeOut(800);}, 3000)
+}

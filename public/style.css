@@ -5,6 +5,7 @@
 body, html {
   height: 100%;
   overflow-y: hidden;
+  overflow-x: hidden;
   background-color: #111;
 }
 
@@ -42,9 +43,6 @@ width: 100%;
   max-width: 100%;
 }
 .txtDia{
-  position: absolute;
-  top:42%; 
-  left:45%;
   font-size: 80px;
   color: white;
  }
@@ -60,8 +58,9 @@ width: 100%;
 /  -                               CONTAINERS                                    -
 /  -------------------------------------------------------------------------------
 */
-.tela-container{
+.tela-container {
   height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -71,6 +70,7 @@ width: 100%;
   width: 100%;
   background-color: #111;
 }
+
 #background-container {
   height: 100%;
   background-repeat: no-repeat;
@@ -94,6 +94,12 @@ width: 100%;
 #answer-buttons button{
   margin: 10px 15px;
   flex-grow: 1;
+}
+
+#daycicle-container {
+  position: absolute;
+  top: 0;
+  z-index:1000;
 }
 
 

@@ -15,8 +15,8 @@ Você passa a tarde toda ao dispor de potenciais clientes que estejam caminhando
 
 Está chegando no fim da tarde, e o sol já está dourando os prédios. Já faz um tempo que não passa ninguém pela rua, então você está pensando em dar o fora. Até que um sujeito sai de dentro da faculdade lá na outra quadra. Ele olha para seu caminhão, e vira a rua para te encontrar.#
 
-codigo chamarMarcio()#
 <span class="balao marcio">???: “Opa, tudo bem? Isso são lanches que você está vendendo aí?”</span>#
+codigo chamarMarcio()#
 
 <span class="player">“Hã? Ah, são sim senhor! Vai querer alguma coisa?”</span>#
 
