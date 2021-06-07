@@ -22,12 +22,17 @@
     
         
     <!-- Tela GOODENDING / FINAL -->
-    <div id="final-container" class="position-absolute-top" style="display:none;">
+    <div id="final-container" class="position-absolute-top tela-container bg-facul" style="display:none;">
         <!-- Se você tirar a classe flex-column, os itens dentro da div distribuem-se em linha (experimente!) -->
         <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100%;">
-            <h1 class="txtDia"><!-- Título --></h1>
+           <div class="container bg-dark text-center p-5">
+            <h1 id="tituloFim" class="txtDia">ACABOU O JOGO</h1>
             <!-- Conteúdo -->
+            <h1 id="mensagemFim" class="txtDia" style="font-size:20px; font-style: italic; font-weight: 400;">Mensagem motivacional</h1>
+
             <span class="text-white pontuacao"></span>
+           </div>
+           
         </div>
     </div>
 
@@ -211,11 +216,28 @@
     }
     function fim() {
         setTimeout(function(){containerFim.fadeIn(800)}, 3000)
-        $(".pontuacao").text(_pontuacao)
+        $(".pontuacao").text("Pontuação: "+_pontuacao)
         if(_pontuacao < 0) {
+            if(_pontuacao<=-2){
+                $("#tituloFim").text("FRACASSO COMPLETO");
+                $("#mensagemFim").text("As coisas pareciam estar indo bem para um início de negócio, mas não para um negócio consolidado. Todo dia parecia que você ainda tinha que lutar para conquistar espaço no mercado e ter clientes o bastante para pagar pelos custos de produção e trabalho. Mas continuou lutando, na expectativa de um dia em que seu negócio amadureceria. Mas esse dia não chegou. O que chegou, na verdade, foi o dia em que você teve que desistir do seu foodtruck e ficar desempregado novamente. Parece que suas decisões foram infrutíferas todo esse tempo.");
+            }else if(_pontuacao==-1){
+                $("#tituloFim").text("FINAL RUIM");
+                $("#mensagemFim").text("Depois de muito esforço, a situação já é diferente daquele primeiro dia em que seu único cliente foi o professor Márcio. Você recebe uma quantidade modesta de fregueses todos os dias, mas mal dá para pagar a manutenção do seu food truck. É o bastante para conseguir se sustentar no geral, mas se vem um dia difícil você já não consegue custear suas necessidades básicas. No final das contas, parece que suas Estratégias de Marketing não foram tão precisas quanto poderiam ter sido.");
+            }
             mudarMusica("badending")
         } else if(_pontuacao > 0) {
+            if(_pontuacao>=3){
+                $("#tituloFim").text("SUCESSO COMPLETO");
+                $("#mensagemFim").text("Você continua trabalhando duro, e após alguns meses, se lembra de todo o caminho que trilhou. Os resultados superaram muito suas expectativas, e agora você é o principal food truck da região. É tanta gente querendo comer seus hot dogs que você decide abrir um estabelecimento, afinal, conseguiu juntar dinheiro o bastante para tal investimento. As suas Estratégias de Marketing foram perfeitas, e você está mais determinado do que nunca para por em prática novos conceitos de marketing e enriquecer com seus maravilhosos hotdogs! Nada pode te parar agora.");
+            }else if(_pontuacao==1){
+                $("#tituloFim").text("FINAL BOM");
+                $("#mensagemFim").text("Suas Estratégias de Marketing foram muito bem traçadas, e com cada dia que passa seu food truck faz mais sucesso, e vira um ponto conhecido na região. Graças a isso você consegue viver uma vida confortável trabalhando com o que gosta. Todo dia uma fila é formada à sua frente, e sobra dinheiro até para tirar dias de folga quando dá na telha. Agora você vai traçar seus Objetivos a partir do SMART e melhorar ainda mais. O futuro lhe é promissor.");
+            }
             mudarMusica("goodending")
+        }else{ //neutro
+            $("#tituloFim").text("FINAL NEUTRO");
+            $("#mensagemFim").text("Com o passar das semanas você consegue de fato ver suas decisões surtindo efeito. Você consegue criar uma clientela constante que te garante um lucro seguro todo mês. Seu food truck não faz grande sucesso, mas é o bastante para te convencer que ter iniciado esse negócio foi mesmo uma boa ideia. Você continua sempre estudando para melhorar, tanto na culinária quanto no marketing. Os próximos passos serão a partir dos Objetivos usando a metodologia SMART, e nada está dando errado.");
         }
     }
 

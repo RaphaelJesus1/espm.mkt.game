@@ -22,7 +22,7 @@ codigo concatenaOpcao('btnPromocao',_promocao.texto )#
 <span class="narrador">Durante os próximos dias, parece que sua promoção teve resultado, mas é necessario mais algum tempo para analisar realmente quanto sucesso suas escolhas te trouxeram.</span>#
 ...#
 <span class="narrador">Após terminar de atender um cliente, um rosto familiar vêm à frente. É o professor Márcio. Ele pede um cachorro quente como fez naqueles dois primeiros dias quando o conheceu. Ele parece impressionado com a fila que vê.</span>#
-<span class="balao marcio">"Bom trabalho, <span id="nome"></span>, me parece que seu negócio está indo muito bem por enquanto!"</span>#
+<span class="balao marcio">"Bom trabalho, [nome], me parece que seu negócio está indo muito bem por enquanto!"</span>#
 codigo chamarMarcio()#
 <span class="player">"Márcio, quanto tempo! E obrigado! Sim, eu procurei pelos os conceitos de estratégia de marketing em prática hehe. Depois de ter pensado melhor no meu produto eu decidi que meu ponto de venda seria aqui. Mas aí me deparei com um concorrente, então tive que pensar numa proposta de valor que me diferenciasse dele. E agora já estou divulgando meu caminhãozinho por aí!"</span>#
 <span class="balao marcio">"Então você se tornou um marqueteiro nato! Pensou no produto, na praça, no preço e na promoção. Esses são os 4 Ps de marketing! E escolheu eles com base nas suas análises, desde você mesmo com a SWOT, até a do ambiente, da concorrência e de mercado-alvo!"</span>#
