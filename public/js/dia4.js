@@ -1,5 +1,5 @@
 const _dia4 = `
-<span class="narrador">Amanhece mais uma vez, e você ainda estudando para melhorar ainda mais. Você já está construindo um púbico próprio, mas percebe que ainda precisa divulgar seu produto para fazer sua marca conhecida para novas pessoas. Pesquisando sobre o próximo passo da estratégia de marketing, o mercado alvo, está claro que divulgar para um público específico é a melhor forma de consolidar uma clientela.</span>#
+<span class="narrador">Amanhece mais uma vez, e você ainda estudando para melhorar ainda mais. Você já está construindo um público próprio, mas percebe que ainda precisa divulgar seu produto para fazer sua marca conhecida para novas pessoas. Pesquisando sobre o próximo passo da estratégia de marketing, o mercado alvo, está claro que divulgar para um público específico é a melhor forma de consolidar uma clientela.</span>#
 <span class="player"> "Hm, promover meus hotdogs é um investimento, mas não dá para atirar para todos os lados porque seria muito caro. Considerando a identidade de marca que estou construindo, qual seria a melhor forma de divulgar meu food truck?"</span>#
 codigo montarEscolhas(objEscolhaPromocao)
 `.replace(/\n/g,"").split("#")
@@ -33,7 +33,7 @@ codigo chamarMarcio()#
 <span class="player">"Mas o que seria exatamente SMART?"</span>#
 
 <span class="balao marcio">"A metodologia SMART está relacionada com a definição dos seus objetivos futuros dentro do seus negócio, a fim de deixá-los alinhados ao que é possível realizar com seu negócio e o mercado que o engloba.
-Basicamente vai deixar seus objetivos dentro de espectativas reais!"</span>#
+ Basicamente vai deixar seus objetivos dentro de espectativas reais!"</span>#
 
 <span class="player">"Legal! E como funciona essa metodologia?"</span>#
 

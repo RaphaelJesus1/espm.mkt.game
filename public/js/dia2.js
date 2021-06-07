@@ -30,10 +30,10 @@ codigo chamarSupla()#
 
 <span class="player">"Supla! Que surpresa agradável! Sou muito seu fã! Meu nome é [nome]</span>"#
 
-<span class="balao supla">Supla: "Prazer te conhecer [nome]! O que você se tá procurando? Quer tirar uma picture? Uma foto?"</span>#
+<span class="balao supla">Supla: "Prazer te conhecer [nome]! O que você tá procurando? Quer tirar uma picture? Uma foto?"</span>#
 <span class="player">"Isso seria muito legal! Mas na verdade queria ajuda com uma coisa... Sei que você é um paulistano notório e conhece bem a cidade, não?"</span>#
 
-<span class="balao supla">Supla: "Sure! O papito aqui adora São Paulo! Tô sem nenhum compromisso e estaria muito grato de ajudar uma fã!"</span>#
+<span class="balao supla">Supla: "Sure! O papito aqui adora São Paulo! Tô sem nenhum compromisso e estaria muito grato de ajudar um fã!"</span>#
 <span class="narrador">Você mostra o papel onde deixou suas anotações, e explica seu problema para o Supla.</span>#
 
 <span class="balao supla">Supla: "Now that's a problem. Eu conheço lugares muuuuito maneiros pra seu negócio! Partiu? C'mon, vamos!"</span>#
