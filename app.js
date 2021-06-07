@@ -4,7 +4,6 @@ const express = require("express");
 const wrap = require("express-async-error-wrapper");
 const path = require("path");
 const ejs = require("ejs");
-const Questao = require("./models/questao");
 const app = express();
 
 
@@ -30,15 +29,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/quiz", wrap(async (req, res) => {
-    //let lista = JSON.stringify(await Questao.listar());
-    //res.render("quiz", { lista: lista });
     res.render("quiz");
-}));
-app.get("/transicao", wrap(async (req, res) => {
-    res.render("transicaoDia");
-}));
-app.get("/gameover", wrap(async (req, res) => {
-    res.render("gameover");
 }));
 // ------------------------------------------------------
 

@@ -2,7 +2,7 @@
 
 <div class="tela-quiz">
     <!-- Imagem FUNDO -->
-    <div id="background-container" class="bg-metro">
+    <div id="background-container" class="bg-facul">
         <div class="d-flex justify-content-around align-content-end" style="height: 100%;">
             <img class="limitador img-marcio d-none" src="/img/marcio.png" alt="">
             <img class="limitador img-supla d-none" src="/img/supla.png" alt="">
@@ -35,7 +35,7 @@
     </div>
 
     <!-- Tela GAMEOVER -->
-    <div id="gameover-container" class="position-absolute-top bg-vermelho d-none">
+    <div id="gameover-container" class="position-absolute-top bg-vermelho" style="display: none;">
         <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100%;">
             <h1 class="txtDia">FIM DE JOGO</h1>
             <h3 class="text-white">Pontuação: <span class="pontuacao"></span></h3>
@@ -108,7 +108,7 @@
     }) */
 
     function comecarJogo() {
-        mudarDia(_intro, "introdução");
+        mudarDia(_dia4, "introdução");
     }
 
     function proximoTexto() {
@@ -213,19 +213,6 @@
         containerBtn.html("")
     }
 
-
-    function clicouBotao() {
-        
-    }
-    
-    function escolherResposta() {
-
-    }
-
-    function mostrarResultado(produto) {
-        
-    }
-
     function mudarDia(novoDia, nomeDia = "") {
         _diaAtual = novoDia.map((x) => x);
         _dia++
@@ -234,8 +221,16 @@
            .then(proximoTexto());
     }
     function gameover() {
-       $("#gameover-container").removeClass("d-none")
+       setTimeout(function(){ $("#gameover-container").fadeIn(800)}, 4000)
        $(".pontuacao").text(_pontuacao)
+       mudarMusica("badending")
+    }
+    function fim() {
+        if(_pontuacao < 0) {
+            mudarMusica("badending")
+        } else if(_pontuacao > 0) {
+            mudarMusica("goodending")
+        }
     }
 
     function mudarArray(novaTrilha) {

@@ -1,9 +1,9 @@
 <audio id="audio" loop >
-    <source src="/music/tema.mp3" type="audio/mpeg">
+    <source id="audioSource" src="/music/themesong.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
 </audio>
 
-<div id="audio-container" class="position-absolute bg-preto d-flex items-align-center" style="top:0; left:0; z-index:10; max-width: 150px; max-height: 40px;">
+<div id="audio-container" class="position-absolute bg-preto d-flex items-align-center" style="top:0; left:0; z-index:2000; max-width: 150px; max-height: 40px;">
     <button type="button" class="btn play-pause"><i class="text-white fas fa-volume-mute"></i></button>
     <input type="range" id="volume-range" class="form-range" style="width:60%" oninput="audio.volume = this.value/100"
         min=0 max=100>
@@ -26,4 +26,10 @@
             iconePlayPause.removeClass("fa-volume-up").addClass("fa-volume-mute")
         }
     })
+
+    function mudarMusica(nome) {
+        $("#audioSource").attr("src", `/music/${nome}.mp3`);
+        audio.load()
+        audio.play()
+    }
 </script>
