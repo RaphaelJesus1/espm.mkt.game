@@ -9,44 +9,47 @@ const _intro = `
 	
 …#
 
-Você passa a tarde toda ao dispor de potenciais clientes que estejam caminhando pela calçada, mas ninguém até agora parou para comprar nada. Você começa a se perguntar se está fazendo alguma coisa errada. Será que as comidas estão cheirando mal? Mas sempre lhe disseram que você cozinhava bem…#
+<span class="narrador">Você passa a tarde toda ao dispor de potenciais clientes que estejam caminhando pela calçada, mas ninguém até agora parou para comprar nada. Você começa a se perguntar se está fazendo alguma coisa errada. Será que as comidas estão cheirando mal? Mas sempre lhe disseram que você cozinhava bem…</span>#
 
 …#
 
-Está chegando no fim da tarde, e o sol já está dourando os prédios. Já faz um tempo que não passa ninguém pela rua, então você está pensando em dar o fora. Até que um sujeito sai de dentro da faculdade lá na outra quadra. Ele olha para seu caminhão, e vira a rua para te encontrar.#
+<span class="narrador">Está chegando no fim da tarde, e o sol já está dourando os prédios. Já faz um tempo que não passa ninguém pela rua, então você está pensando em dar o fora. Até que um sujeito sai de dentro da faculdade lá na outra quadra. Ele olha para seu caminhão, e vira a rua para te encontrar.</span>#
 
-<span class="balao marcio">???: “Opa, tudo bem? Isso são lanches que você está vendendo aí?”</span>#
+<span class="balao marcio">Cliente: “Opa, tudo bem? Isso são lanches que você está vendendo aí?”</span>#
 codigo chamarMarcio()#
 
 <span class="player">“Hã? Ah, são sim senhor! Vai querer alguma coisa?”</span>#
 
-Você realmente não esperava um cliente a esse ponto. Este homem te tomou totalmente de surpresa, e você nem sabe direito como responder… Ele dá uma boa olhada nos produtos, com um sorriso tenro no rosto.#
+<span class="narrador">Você realmente não esperava um cliente a esse ponto. Este homem te tomou totalmente de surpresa, e você nem sabe direito como responder… Ele dá uma boa olhada nos produtos, com um sorriso tenro no rosto.</span>#
 
-<span class="balao marcio">???: “Olha só, você tem cachorros-quentes! Eu com certeza vou querer um.</span>#
+<span class="balao marcio">Cliente: “Olha só, você tem cachorros-quentes! Eu com certeza vou querer um.</span>#
 
 <span class="player">“É-é pra já! Err, aqui está…”</span>#
-Você lhe entrega um hotdog e ele dá uma bela mordida, saboreando com enorme entusiasmo. Imediatamente, ele pede por mais cinco! Ele paga tudo e ainda te dá todo o troco.#
+<span class="narrador">Você lhe entrega um hotdog e ele dá uma bela mordida, saboreando com enorme entusiasmo. Imediatamente, ele pede por mais cinco! Ele paga tudo e ainda te dá todo o troco.</span>#
 
-<span class="balao marcio">???: Meu deus, isso está maravilhoso! Foi você que fez mesmo? Qual é seu nome?</span>#
+<span class="balao marcio">Cliente: Meu deus, isso está maravilhoso! Foi você que fez mesmo? Qual é seu nome?</span>#
 
 <span class="player">“Eu me chamo...”</span>#
 codigo montarInput("_nomeJogador")#
 
-<span class="balao marcio">???: “É um prazer, eu me chamo Márcio. Eu sou professor de marketing naquela faculdade ali de trás. Cachorro-quente é o meu lanche favorito, e eu preciso de dizer que este foi o melhor que eu já provei! Você tem potencial! Vai vender pra caramba aqui por perto!”</span>#
+<span class="balao marcio">Cliente: “É um prazer, eu me chamo Márcio. Eu sou professor de marketing naquela faculdade ali de trás. Cachorro-quente é o meu lanche favorito, e eu preciso de dizer que este foi o melhor que eu já provei! Você tem potencial! Vai vender pra caramba aqui por perto!”</span>#
 
 <span class="player">“Na verdade... estou aqui a tarde toda, e você foi meu primeiro cliente.”#
 
-Márcio te olha instigado, e dá uma boa olhada no seu caminhãozinho.#
+<span class="narrador">Márcio te olha instigado, e dá uma boa olhada no seu caminhãozinho.</span>#
 
 <span class="balao marcio">Márcio: “É o seu primeiro dia fazendo isso, não é? Nunca te vi por aqui antes. É, [nome], você ainda tem muito o que aprender. Para fazer sucesso, não adianta ter uma comida boa, você precisa saber como apresentá-la. Trate esse seu negócio como uma marca, e faça uma Estratégia de Marketing para seu negócio.”</span>#
 
 <span class="balao marcio">Márcio: “Esse jeito simples mas gostoso de cozinhar é seu diferencial. Mas me parece que é difícil conseguir fazer muita coisa sozinho. Lembre-se, foque nas suas forças para tentar minimizar suas fraquezas. Você vai longe!”</span>#
 
-Márcio acena e caminha para longe, antes de você ter tempo de dizer adeus. Você acena de volta, mas ele já está cruzando a esquina. Esse encontro foi realmente muito estranho…#
+<span class="narrador">Márcio acena e caminha para longe, antes de você ter tempo de dizer adeus. Você acena de volta, mas ele já está cruzando a esquina. Esse encontro foi realmente muito estranho…</span>#
 codigo dispensarMarcio()#
 	
 <span class="player">“Será mesmo que tenho esse potencial? O que ele quis dizer com Estratégia de Marketing? Preciso saber mais…”</span>#
 
-" Você volta para casa pouco depois, e passa a noite pesquisando sobre Estratégias de Marketing. Se tem algo que pode me ajudar, deve ser isso!#
+<span class="narrador">Você volta para casa pouco depois, e passa a noite pesquisando sobre Estratégias de Marketing. Se tem algo que pode me ajudar, deve ser isso!</span>#
+
+...#
+
 codigo mudarDia(_dia1)
 `.replace(/\n/g,"").split("#")

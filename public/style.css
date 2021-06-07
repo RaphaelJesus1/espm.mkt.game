@@ -74,13 +74,23 @@ width: 100%;
 }
 
 #text-container{
-    max-height: 200px;
+    max-height: 250px;
     position: absolute;
-    background-color: #111a;
+    background-color: #222;
     text-align: center;
     color: #fff;
     cursor: pointer;
+    border-top: 2px solid white;
 }
+
+#text-container *{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .text-capsule{
+  font-size: 20px;
+} */
 
 #answer-buttons{
     max-height: 150px;
@@ -111,7 +121,7 @@ width: 100%;
   text-align: center;
   position: fixed;
   border-radius: 10px; 
-  top:70%; 
+  top:60%; 
   left:25%; 
   width:50%; 
   color: rgb(36, 36, 36);

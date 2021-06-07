@@ -1,5 +1,5 @@
 const _dia4 = `
-Amanhece mais uma vez, e você ainda estudando para melhorar ainda mais. Você já está construindo um púbico próprio, mas percebe que ainda precisa divulgar seu produto para fazer sua marca conhecida para novas pessoas. Pesquisando sobre o próximo passo da estratégia de marketing, o mercado alvo, está claro que divulgar para um público específico é a melhor forma de consolidar uma clientela.#
+<span class="narrador">Amanhece mais uma vez, e você ainda estudando para melhorar ainda mais. Você já está construindo um púbico próprio, mas percebe que ainda precisa divulgar seu produto para fazer sua marca conhecida para novas pessoas. Pesquisando sobre o próximo passo da estratégia de marketing, o mercado alvo, está claro que divulgar para um público específico é a melhor forma de consolidar uma clientela.</span>#
 <span class="player"> "Hm, promover meus hotdogs é um investimento, mas não dá para atirar para todos os lados porque seria muito caro. Considerando a identidade de marca que estou construindo, qual seria a melhor forma de divulgar meu food truck?"</span>#
 codigo montarEscolhas(objEscolhaPromocao)
 `.replace(/\n/g,"").split("#")
@@ -9,7 +9,7 @@ codigo montarEscolhas(objEscolhaPromocao)
 const alternativoEscolhaPromocao = `
 ...#
 codigo concatenaOpcao('btnPromocao',_promocao.texto )#
-Você dedica um bom tempo divulgando para os seus amigos próximos. Mesmo que eles sejam clientes fiéis, isso não aumentou muito o público do seu negócio, e com tempo até mesmo seus amigos vão aparecendo menos e menos. O dinheiro vai ficando apertando, todo dia o prejuízo vai aumentando, até que você não consegue mais se manter. Seu food truck fracassa.#
+<span class="narrador">Você dedica um bom tempo divulgando para os seus amigos próximos. Mesmo que eles sejam clientes fiéis, isso não aumentou muito o público do seu negócio, e com tempo até mesmo seus amigos vão aparecendo menos e menos. O dinheiro vai ficando apertando, todo dia o prejuízo vai aumentando, até que você não consegue mais se manter. Seu food truck fracassa.</span>#
 
 codigo gameover()#
 `.replace(/\n/g,"").split("#")
@@ -19,9 +19,9 @@ const padraoEscolhaPromocao = `
 [valor]#
 codigo concatenaGremio()#
 codigo concatenaOpcao('btnPromocao',_promocao.texto )#
-Durante os próximos dias, parece que sua promoção teve resultado, mas é necessario mais algum tempo para analisar realmente quanto sucesso suas escolhas te trouxeram.#
+<span class="narrador">Durante os próximos dias, parece que sua promoção teve resultado, mas é necessario mais algum tempo para analisar realmente quanto sucesso suas escolhas te trouxeram.</span>#
 ...#
-Após terminar de atender um cliente, um rosto familiar vêm à frente. É o professor Márcio. Ele pede um cachorro quente como fez naqueles dois primeiros dias quando o conheceu. Ele parece impressionado com a fila que vê.#
+<span class="narrador">Após terminar de atender um cliente, um rosto familiar vêm à frente. É o professor Márcio. Ele pede um cachorro quente como fez naqueles dois primeiros dias quando o conheceu. Ele parece impressionado com a fila que vê.</span>#
 <span class="balao marcio">"Bom trabalho, <span id="nome"></span>, me parece que seu negócio está indo muito bem por enquanto!"</span>#
 codigo chamarMarcio()#
 <span class="player">"Márcio, quanto tempo! E obrigado! Sim, eu procurei pelos os conceitos de estratégia de marketing em prática hehe. Depois de ter pensado melhor no meu produto eu decidi que meu ponto de venda seria aqui. Mas aí me deparei com um concorrente, então tive que pensar numa proposta de valor que me diferenciasse dele. E agora já estou divulgando meu caminhãozinho por aí!"</span>#
@@ -43,7 +43,7 @@ Basicamente vai deixar seus objetivos dentro de espectativas reais!"</span>#
 
 <span class="player">"Caramba, que aula que você me deu agora! Definitivamente vou por em prática tudo que você me ensinou!"</span>#
 
-Márcio sorri e acena para você. Você retribui e analisa tudo que passou nos últimos dias.#
+<span class="narrador">Márcio sorri e acena para você. Você retribui e analisa tudo que passou nos últimos dias.</span>#
 codigo dispensarMarcio()#
 
 <span class="player">"Caramba! Que jornada hein? Agora é só esperar para ver o que o futuro me aguarda..."</span>#

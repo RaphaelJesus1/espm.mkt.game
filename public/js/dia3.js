@@ -1,15 +1,15 @@
-const _dia3 = `Depois de uma boa noite de sono, você já sente animado para prosseguir com seu plano de marketing.#
-Você dirige seu food truck até o lugar que decidiu ficar anteriormente.#
-Ao estacionar você percebe que outro food truck, está perto da região.#
+const _dia3 = `<span class="narrador">Depois de uma boa noite de sono, você já sente animado para prosseguir com seu plano de marketing.</span>#
+<span class="narrador">Você dirige seu food truck até o lugar que decidiu ficar anteriormente.</span>#
+<span class="narrador">Ao estacionar você percebe que outro food truck, está perto da região.</span>#
 
 <span class="player">"Nossa! Não tinha visto que tinham concorrentes aqui..."</span>#
-Olhando melhor, você vê que seu concorrente vende hambúrgueres que chamam bastante atenção.#
+<span class="narrador">Olhando melhor, você vê que seu concorrente vende hambúrgueres que chamam bastante atenção.</span>#
 
 [valor]#
 codigo concatenaLocal()#
 
 <span class="player">"Caramba, por essa eu não esperava... Bem, isso obviamente não é o fim do mundo."</span>#
-Lembrando alguns conselhos do seu amigo Márcio, você chega em algumas conclusões:#
+<span class="narrador">Lembrando alguns conselhos do seu amigo Márcio, você chega em algumas conclusões:</span>#
 <span class="player">"Tenho que focar no que sou forte, identificar minhas oportunidades aqui e tomar vantagem sobre minha concorrência. Assim eu vou ir muito bem com minhas vendas!"</span> #
 
 <span class="player"> "O food truck dele tem uma decoração bem bonita. Não importa se o meu cachorro quente é bom, se as pessoas olharem para o caminhãozinho dele e ficarem com vontade de comer hambúrguer, não vão nem querer vir aqui! Eu tenho que criar uma proposta de valor para que as pessoas queiram comer a minha comida! Mas isso pode ser um investimento custoso..."</span>#
@@ -27,11 +27,14 @@ const padraoEscolhaPreco =
 `
 ...#
 codigo concatenaOpcao('btnPreco',_preco.texto )#
-Você volta para casa e prepara as coisas de acordo com a proposta de valor que pensou, e no próximo dia retorna para colher os resultados disso.#
-Os clientes que  acabam optando pelo seu produto ficam muito satisfeitos pelo que estão consumindo de acordo com o que estão pagando.# 
-A concorrência ainda persiste, entretanto suas decisões fizeram com que você ganhasse espaço na região.#
+<span class="narrador">Você volta para casa e prepara as coisas de acordo com a proposta de valor que pensou, e no próximo dia retorna para colher os resultados disso.</span>#
+<span class="narrador">Os clientes que  acabam optando pelo seu produto ficam muito satisfeitos pelo que estão consumindo de acordo com o que estão pagando.</span># 
+<span class="narrador">A concorrência ainda persiste, entretanto suas decisões fizeram com que você ganhasse espaço na região.</span>#
 <span class="player"> "Parece que minhas decisões estão dando frutos! Estou muito perto de terminar esse processo."</span>
-Seu dia foi um de muitas decisões difíceis e situações desafiadoras, mas necessários para chegar ao fim desse processo e prosperar, <span id="nome"></span>#
+<span class="narrador">Seu dia foi um de muitas decisões difíceis e situações desafiadoras, mas necessários para chegar ao fim desse processo e prosperar, <span id="nome"></span></span>#
+
+...#
+
 codigo mudarDia(_dia4)
 `.replace(/\n/g,"").split("#")
 
@@ -40,10 +43,10 @@ codigo mudarDia(_dia4)
 const alternativoEscolhaPreco = `
 ...#
 codigo concatenaOpcao('btnPreco',_preco.texto )#
-O número de pessoas interessadas inicialmente aumenta, mas após vender alguns lanches, os clientes acharam seu produto muito caro para um produto de tão baixa qualidade.#
-Eles passam a recomendar não ir comer em seu estabelecimento, espalhando opiniões negativas em redes sociais, fóruns de discussão e apps de restaurantes. Seu concorrente se beneficiou dos clientes revoltados e ganhou novos clientes rapidamente com a fama negativa do seu food truck.#
-Você inclusive observa Márcio e Supla comendo da sua concorrência, observando o grande erro que cometeu e o que o levou a chegar a esse ponto.#
-Em pouco tempo você fecha, por falta de clientes.#
+<span class="narrador">O número de pessoas interessadas inicialmente aumenta, mas após vender alguns lanches, os clientes acharam seu produto muito caro para um produto de tão baixa qualidade.</span>#
+<span class="narrador">Eles passam a recomendar não ir comer em seu estabelecimento, espalhando opiniões negativas em redes sociais, fóruns de discussão e apps de restaurantes. Seu concorrente se beneficiou dos clientes revoltados e ganhou novos clientes rapidamente com a fama negativa do seu food truck.</span>#
+<span class="narrador">Você inclusive observa Márcio e Supla comendo da sua concorrência, observando o grande erro que cometeu e o que o levou a chegar a esse ponto.</span>#
+<span class="narrador">Em pouco tempo você fecha, por falta de clientes.</span>#
 codigo gameover()
 `.replace(/\n/g,"").split("#")
 
