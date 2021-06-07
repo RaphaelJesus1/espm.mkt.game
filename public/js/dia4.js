@@ -55,7 +55,7 @@ function concatenaGremio(){
     if(_local.texto=="Faculdade" && _promocao.texto =="Divulgar no Instagram"){
         return "Você conversa com o grêmio da faculdade e vocês acordam em um desconto para os estudantes. Considerando que é um público regular durante todos os dias da semana, isso lhe garante uma estabilidade nas vendas que assegura a manutenção do seu foodtruck.";
     }
-    return proximoTexto();
+    return "";
 }
 
 

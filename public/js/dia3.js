@@ -52,12 +52,13 @@ codigo gameover()
 
 const objEscolhaPreco = {
     html: [
-        {titulo: "Melhorar a experiência e aumentar preço", valor:"melhorar", cor: "warning", frase:" Vou decorar o food truck e fazer uma apresentação muito especial. Se meus hotdogs oferecerem uma experiência diferenciada, posso cobrar preços mais altos aqui."},
-        {titulo: "Abaixar custos e preços", valor:"abaixar", cor: "info", frase:"Vou abaixar meus preços e gastos, mesmo que custe abaixar um pouco a qualidade."},
-        {titulo: "Manter os preços", valor:"manter", cor: "danger", frase:" Minha proposta será verdadeira. Meu produto é bom e logo vou manter meus preços, não tem porque fingir seu algo que não sou."},
+        {titulo: "Melhorar a experiência e aumentar preço", valor:"melhorar", cor: "warning", pontos:{artesanal:1, congelado:-1, simples:0}, frase:" Vou decorar o food truck e fazer uma apresentação muito especial. Se meus hotdogs oferecerem uma experiência diferenciada, posso cobrar preços mais altos aqui."},
+        {titulo: "Abaixar custos e preços", valor:"abaixar", cor: "info", pontos:{artesanal:-1, congelado:0, simples:1}, frase:"Vou abaixar meus preços e gastos, mesmo que custe abaixar um pouco a qualidade."},
+        {titulo: "Manter os preços", valor:"manter", cor: "danger", pontos:{artesanal:0, congelado:0, simples:1}, frase:" Minha proposta será verdadeira. Meu produto é bom e logo vou manter meus preços, não tem porque fingir seu algo que não sou."},
         {titulo: "Diminuir custos e aumentar preço", valor:"diminuir", cor: "purple", frase:" Posso economizar bastante com meus custos de produção e investir tudo na imagem, assim eu posso subir os preços mesmo assim."}
     ],
     variavel: "_preco",
+    varPontos: "_hotdog",
     errada: 4,
     padrao: padraoEscolhaPreco,
     alternativo: alternativoEscolhaPreco
