@@ -14,6 +14,22 @@ body, html {
   height: 100vh;
 }
 
+/* #tela-final{
+
+} */
+
+.marcio-normal{
+  background-image: url('/img/marcio.png');
+}
+
+.marcio-boladao{
+  background-image: url('/img/marcio-boladao.png');
+}
+
+.marcio-felizao{
+  background-image: url('/img/marcio-felizao.png');
+}
+
 .nav-right {
   position: absolute;
   top: 0;
@@ -67,6 +83,14 @@ width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.tela-container2 {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 #background-container {

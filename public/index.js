@@ -26,6 +26,7 @@ function openQuestions() {
 
 function chamarMarcio() {
   marcio.removeClass("d-none")
+  console.log("marcio normal chamado")
   marcio.addClass("animate-chegar")
   setTimeout(function() {marcio.removeClass("animate-chegar")}, 2100) // remover a classe dps de acabar o efeito
   // pra não conflitar com a animação de saída mais tarde.
@@ -34,6 +35,30 @@ function chamarMarcio() {
 function dispensarMarcio() {
   marcio.addClass("animate-sair")
   setTimeout(function() {marcio.addClass("d-none"); marcio.removeClass("animate-sair");}, 2100)
+}
+
+function chamarMarcioBoladao() {
+  marcioBoladao.removeClass("d-none")
+  marcioBoladao.addClass("animate-chegar")
+  setTimeout(function() {marcioBoladao.removeClass("animate-chegar")}, 2100) // remover a classe dps de acabar o efeito
+  // pra não conflitar com a animação de saída mais tarde.
+}
+
+function dispensarMarcioBoladao() {
+  marcioBoladao.addClass("animate-sair")
+  setTimeout(function() {marcioBoladao.addClass("d-none"); marcioBoladao.removeClass("animate-sair");}, 2100)
+}
+
+function chamarMarcioFelizao() {
+  marcioBoladao.removeClass("d-none")
+  marcioBoladao.addClass("animate-chegar")
+  setTimeout(function() {marcioBoladao.removeClass("animate-chegar")}, 2100) // remover a classe dps de acabar o efeito
+  // pra não conflitar com a animação de saída mais tarde.
+}
+
+function dispensarMarcioFelizao() {
+  marcioFelizao.addClass("animate-sair")
+  setTimeout(function() {marcioFelizao.addClass("d-none"); marcioFelizao.removeClass("animate-sair");}, 2100)
 }
 
 function chamarSupla() {
