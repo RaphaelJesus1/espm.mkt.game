@@ -59,5 +59,6 @@ function dispensarSupla() {
 
 function animacaoMudarDia() {
   containerDaycicle.fadeIn(800)
-  setTimeout(function(){ containerDaycicle.fadeOut(800);}, 3000)
+  containerText.fadeOut(300)
+  setTimeout(function(){ containerDaycicle.fadeOut(800);containerText.fadeIn(800)}, 3000)
 }

@@ -5,7 +5,7 @@ Ao estacionar você percebe que outro food truck, está perto da região.#
 <span class="player">"Nossa! Não tinha visto que tinham concorrentes aqui..."</span>#
 Olhando melhor, você vê que seu concorrente vende hambúrgueres que chamam bastante atenção.#
 
-...#
+[valor]#
 codigo concatenaLocal()#
 
 <span class="player">"Caramba, por essa eu não esperava... Bem, isso obviamente não é o fim do mundo."</span>#
@@ -44,7 +44,7 @@ O número de pessoas interessadas inicialmente aumenta, mas após vender alguns 
 Eles passam a recomendar não ir comer em seu estabelecimento, espalhando opiniões negativas em redes sociais, fóruns de discussão e apps de restaurantes. Seu concorrente se beneficiou dos clientes revoltados e ganhou novos clientes rapidamente com a fama negativa do seu food truck.#
 Você inclusive observa Márcio e Supla comendo da sua concorrência, observando o grande erro que cometeu e o que o levou a chegar a esse ponto.#
 Em pouco tempo você fecha, por falta de clientes.#
-FIM DE JOGO
+codigo gameover()
 `.replace(/\n/g,"").split("#")
 
 const objEscolhaPreco = {
@@ -62,9 +62,9 @@ const objEscolhaPreco = {
 
 function concatenaLocal(){
     if(_local.texto=="Parque Gastronômico"){
-        containerText.html("Os hambúrgueres parecem ser bem bonitos.");
+        return "Os hambúrgueres parecem ser bem bonitos.";
     }else if(_local.texto=="Metrô"){
-        containerText.html("Os hambúrgueres parecem ser feitos de forma bem rápida e bem baratos para o que oferecem.")
-
+        return "Os hambúrgueres parecem ser feitos de forma bem rápida e bem baratos para o que oferecem.";
     }
+    return "";
 }

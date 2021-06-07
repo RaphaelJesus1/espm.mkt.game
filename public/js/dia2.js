@@ -53,18 +53,17 @@ codigo mudarBg("bg-ponte")#
 
 (Chega perto da ESPM)<br>
 <span class="balao supla">Supla: "Hey! E aqui é perto de onde você já tava, não? Os alunos vão cair pelos seus hotdogs! Vão sempre querer!"</span>#
-codigo mudarBg("bg-facul")#
+codigo mudarBg("bg-tech")#
 
 Supla para, tira uma foto com você e agradece sua confiança nele.#
 <span class="balao supla">Supla: "Então? O que vai ser? What's your decision? Qual sua decisão?"</span>#
 codigo montarEscolhas(objEscolhaLocal)#
-codigo dispensarSupla()#
 `.replace(/\n/g,"").split("#")
 
 
 const alternativoEscolhaLocal = `
     ...#
-   codigo concatenaOpcao('btnLocal',_local.texto )#
+    codigo concatenaOpcao('btnLocal',_local.texto )#
     Você move para abaixo da ponte. A falta de visibilidade do local atrapalha muito os negócios, o trânsito barulhento
     e estressante não atrai clientes. Além do péssimo cheiro do rio.#
     codigo mudarBg("bg-ponte")#
@@ -74,31 +73,31 @@ const alternativoEscolhaLocal = `
     
     Poucos te visitam e você sem opções de pagar as contas, fecha em poucos dias. #
     
-    FIM DE JOGO
+    codigo gameover()
 `.replace(/\n/g,"").split("#")
 
 const padraoEscolhaLocal = `
-    codigo dispensarSupla()#
     ...#
+    codigo dispensarSupla()#
     codigo concatenaOpcao('btnLocal',_local.texto )#
     Você move seu food truck para o local escolhido.#
     codigo mudarBg(_local.valor)#
     Supla te visita e pede um de seus hot dogs.#
     codigo chamarSupla()#
-    <span class="balao supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte <span id="nome"></span>!</span>"#
+    <span class="balao supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte [nome]!</span>"#
     Você agradece Supla e depois de trabalhar volta para casa sabendo que sua jornada de marketeiro ainda não acabou.#
     codigo dispensarSupla()#
 
-codigo mudarDia(_dia3)
+    codigo mudarDia(_dia3)
 `.replace(/\n/g,"").split("#")
 
 
 const objEscolhaLocal = {
     html: [
-        {titulo: "Embaixo da Ponte", valor:"ponte", cor: "warning", pontos:{artesanal:1,congelado:-1,simples:0}, frase:"Gostei da ideia da ponte! Um grande cartão postal para uma grande ideia!"},
+        {titulo: "Embaixo da Ponte", valor:"ponte", cor: "warning", frase:"Gostei da ideia da ponte! Um grande cartão postal para uma grande ideia!"},
         {titulo: "Metrô", valor:"metro", cor: "info", pontos:{artesanal:-1,congelado:1,simples:0}, frase:"O metrô! Vou prosperar com toda a movimentação do lugar!"},
-        {titulo: "Parque Gastronômico", valor:"parque", cor: "danger", pontos:{artesanal:0,congelado:-1,simples:1}, frase:"Acredito que meu produto combine bem com o local do Parque Gastronomico"},
-        {titulo: "Faculdade", valor:"facul", cor: "purple", frase:"Perto da faculdade me sinto confortável! Muitos irão vir comer depois das aulas!"}
+        {titulo: "Parque Gastronômico", valor:"parque", cor: "danger", pontos:{artesanal:1,congelado:-1,simples:0}, frase:"Acredito que meu produto combine bem com o local do Parque Gastronomico"},
+        {titulo: "Faculdade", valor:"tech", cor: "purple", pontos:{artesanal:0,congelado:-1,simples:1}, frase:"Perto da faculdade me sinto confortável! Muitos irão vir comer depois das aulas!"}
     ],
     variavel: "_local",
     varPontos: "_hotdog",

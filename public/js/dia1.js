@@ -54,7 +54,6 @@ codigo concatenaOpcao('btnProduto',_hotdog.texto )#
 Você retorna para a rua da faculdade e apresenta sua proposta de dog de açaí. Os poucos que ousaram provar a receita odiaram, parece que não foi uma boa mistura... De repente, você encontra Márcio que também decide provar seu cachorro-quente.#
 <span class="balao marcio">Márcio: "Que ideia horrível foi essa? Perdeu totalmente a sua identidade!"</span>#
 codigo chamarMarcio()#
-FIM DE JOGO#
 codigo gameover()#
 `.replace(/\n/g,"").split("#")
 

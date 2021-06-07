@@ -163,6 +163,9 @@ width: 100%;
 .bg-foodtruck {
   background-image: url('/img/hotdog.jpg');
 }
+.bg-tech {
+  background-image: url('/img/tech.png');
+}
 .bg-preto{
   height: 100%;
   width: 100%;
