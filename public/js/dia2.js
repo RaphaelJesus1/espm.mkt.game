@@ -3,7 +3,7 @@ const _dia2 = `
 <span class="player">"Hoje preciso trabalhar em um ponto que vi que era muito importante: escolher uma boa localização para o meu food truck 
 juntamente com uma análise do macroambiente"</span>#
 
-<span class="narrador">Você abre suas anotações e lembra que a análise do macroambiente é nada mais nada menos que ver mundanças e tendências 
+<span class="narrador">Você abre suas anotações e lembra que a análise do macroambiente é nada mais nada menos que ver mudanças e tendências 
 da região que você está vendendo, nesse caso a cidade de São Paulo, além do país e do mundo. Essa análise inclui fatores 
 em que se relacionam seu negócio e o ambiente como fatores econômicos, demográficos, naturais, tecnológicos,  
 político legais e socioculturais.</span>#
@@ -25,8 +25,8 @@ fáceis de serem comidos a caminho de casa.</span>#
 <span class="narrador">Após isso você decide procurar alguém que pode lhe dar dicas de locais para vender seus produtos.</span>#
 <span class="narrador">Você encontra alguém que lhe parece familiar de costas... Ao se aproximar, a pessoa vira revelando ser:</span>#
 
-codigo chamarSupla()#
 <span class="balao supla">Supla: "Hello! Oi! Tudo bem com você?"</span>#
+codigo chamarSupla()#
 
 <span class="player">"Supla! Que surpresa agradável! Sou muito seu fã! Meu nome é [nome]</span>"#
 
@@ -63,6 +63,7 @@ codigo montarEscolhas(objEscolhaLocal)#
 
 const alternativoEscolhaLocal = `
     ...#
+    codigo dispensarSupla()#
     codigo concatenaOpcao('btnLocal',_local.texto )#
     <span class="narrador">Você move para abaixo da ponte. A falta de visibilidade do local atrapalha muito os negócios, o trânsito barulhento
     e estressante não atrai clientes. Além do péssimo cheiro do rio.</span>#
@@ -84,7 +85,7 @@ const padraoEscolhaLocal = `
     codigo mudarBg(_local.valor)#
     <span class="narrador">Supla te visita e pede um de seus hot dogs.</span>#
     codigo chamarSupla()#
-    <span class="balao supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte [nome]!</span>"#
+    <span class="balao supla">"Delicious! Delícia de lanche! Curti muito seus lanches e desejo o melhor pra ti. Good luck! Boa Sorte [nome]!"</span>#
     <span class="narrador">Você agradece Supla e depois de trabalhar volta para casa sabendo que sua jornada de marketeiro ainda não acabou.</span>#
     codigo dispensarSupla()#
 

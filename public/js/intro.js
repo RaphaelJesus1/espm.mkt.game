@@ -27,12 +27,12 @@ codigo chamarMarcio()#
 <span class="player">“É-é pra já! Err, aqui está…”</span>#
 <span class="narrador">Você lhe entrega um hotdog e ele dá uma bela mordida, saboreando com enorme entusiasmo. Imediatamente, ele pede por mais cinco! Ele paga tudo e ainda te dá todo o troco.</span>#
 
-<span class="balao marcio">Cliente: Meu deus, isso está maravilhoso! Foi você que fez mesmo? Qual é seu nome?</span>#
+<span class="balao marcio">Cliente: Meu deus, isso está maravilhoso! Foi você mesmo que fez? Qual é seu nome?</span>#
 
 <span class="player">“Eu me chamo...”</span>#
 codigo montarInput("_nomeJogador")#
 
-<span class="balao marcio">Cliente: “É um prazer, eu me chamo Márcio. Eu sou professor de marketing naquela faculdade ali de trás. Cachorro-quente é o meu lanche favorito, e eu preciso de dizer que este foi o melhor que eu já provei! Você tem potencial! Vai vender pra caramba aqui por perto!”</span>#
+<span class="balao marcio">Cliente: “É um prazer, eu me chamo Márcio. Eu sou professor de marketing naquela faculdade ali de trás. Cachorro-quente é o meu lanche favorito, e eu preciso te dizer que este foi o melhor que eu já provei! Você tem potencial! Vai vender pra caramba aqui por perto!”</span>#
 
 <span class="player">“Na verdade... estou aqui a tarde toda, e você foi meu primeiro cliente.”#
 

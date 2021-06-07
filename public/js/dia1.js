@@ -1,8 +1,8 @@
 const _dia1 = `
-<span class="narrador">É um novo dia, e antes de sair para trabalhar, você decide por algumas coisas que aprendeu ontem em prática.</span>#
+<span class="narrador">É um novo dia, e antes de sair para trabalhar, você decide por em prática algumas coisas que aprendeu ontem a noite.</span>#
 
-<span class="player">"Hmm, aquele professor realmente adorou meu cachorro quente né? Ele disse para eu focar nas minhas forças e minimizar as fraquezas... Um bom começo seria segmentar o que eu vou vender, eu não posso só oferecer de tudo senão vira uma bagunça! Eu vou fazer do hotdog meu produto principal.</span>#
-<span class="player">Mas eu também posso fazer vários estilos de hotdogs. Que tipo eu posso oferecer que realça as forças do meu negócio e minimiza as fraquezas..?"</span>#
+<span class="player">"Hmm... aquele professor realmente adorou meu cachorro quente, né? Ele disse para eu focar nas minhas forças e minimizar as fraquezas... Um bom começo seria segmentar o que eu vou vender, eu não posso oferecer de tudo senão vira uma bagunça! Vou fazer do hotdog meu produto principal.</span>#
+<span class="player">Mas eu também posso fazer vários estilos de hotdogs. Que tipo eu posso oferecer para realçar as forças do meu negócio e minimizar as fraquezas..?"</span>#
 codigo montarEscolhas(objEscolhaDog)
 `.replace(/\n/g,"").split("#")
 

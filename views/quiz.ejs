@@ -37,7 +37,7 @@
     </div>
 
     <!-- Botão restart -->
-    <a href="/quiz" class="btn btn-dark position-absolute" style="top:0; right:0; z-index:900">
+    <a href="/quiz" class="btn btn-dark position-absolute" style="top:0; right:0; z-index:2000">
         <i class="fa fa-refresh" aria-hidden="true"></i>
     </a>
 
@@ -230,7 +230,7 @@
             }
             mudarMusica("badending")
         } else if(_pontuacao > 0) {
-            if(_pontuacao>=3){
+            if(_pontuacao>=2){
                 $("#tituloFim").text("SUCESSO COMPLETO");
                 $("#mensagemFim").text("Você continua trabalhando duro, e após alguns meses, se lembra de todo o caminho que trilhou. Os resultados superaram muito suas expectativas, e agora você é o principal food truck da região. É tanta gente querendo comer seus hot dogs que você decide abrir um estabelecimento, afinal, conseguiu juntar dinheiro o bastante para tal investimento. As suas Estratégias de Marketing foram perfeitas, e você está mais determinado do que nunca para por em prática novos conceitos de marketing e enriquecer com seus maravilhosos hotdogs! Nada pode te parar agora.");
             }else if(_pontuacao==1){

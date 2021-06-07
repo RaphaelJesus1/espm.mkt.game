@@ -1,6 +1,6 @@
-const _dia3 = `<span class="narrador">Depois de uma boa noite de sono, você já sente animado para prosseguir com seu plano de marketing.</span>#
+const _dia3 = `<span class="narrador">Depois de uma boa noite de sono, você já se sente animado para prosseguir com seu plano de marketing.</span>#
 <span class="narrador">Você dirige seu food truck até o lugar que decidiu ficar anteriormente.</span>#
-<span class="narrador">Ao estacionar você percebe que outro food truck, está perto da região.</span>#
+<span class="narrador">Ao estacionar você percebe que outro food truck está perto da região.</span>#
 
 <span class="player">"Nossa! Não tinha visto que tinham concorrentes aqui..."</span>#
 <span class="narrador">Olhando melhor, você vê que seu concorrente vende hambúrgueres que chamam bastante atenção.</span>#
@@ -30,7 +30,7 @@ codigo concatenaOpcao('btnPreco',_preco.texto )#
 <span class="narrador">Você volta para casa e prepara as coisas de acordo com a proposta de valor que pensou, e no próximo dia retorna para colher os resultados disso.</span>#
 <span class="narrador">Os clientes que  acabam optando pelo seu produto ficam muito satisfeitos pelo que estão consumindo de acordo com o que estão pagando.</span># 
 <span class="narrador">A concorrência ainda persiste, entretanto suas decisões fizeram com que você ganhasse espaço na região.</span>#
-<span class="player"> "Parece que minhas decisões estão dando frutos! Estou muito perto de terminar esse processo."</span>
+<span class="player"> "Parece que minhas decisões estão dando frutos! Estou muito perto de terminar esse processo."</span>#
 <span class="narrador">Seu dia foi um de muitas decisões difíceis e situações desafiadoras, mas necessários para chegar ao fim desse processo e prosperar, <span id="nome"></span></span>#
 
 ...#
@@ -70,5 +70,5 @@ function concatenaLocal(){
     }else if(_local.texto=="Metrô"){
         return "Os hambúrgueres parecem ser feitos de forma bem rápida e bem baratos para o que oferecem.";
     }
-    return "";
+    return "...";
 }
