@@ -21,16 +21,13 @@
 
     
         
-    <!-- Tela FINAL -->
-    <div id="result-container" class="d-none">
-        <div class="t-quiz h1">RESULTADO</div>
-        <div class="my-3">
-            <img id="img-res" width=30% alt="imagem do sabonete" src=""/>
-            <div id="txt-res" class="h2 mt-4"></div>
-        </div>
-        <div class="p-3">
-            <button id="restart-btn" type="button" class="btn btn-light btn-lg">RECOMEÇAR</button>
-            <a id="btn-loja" class="btn btn-success btn-lg" href="">VER NA LOJA</a>
+    <!-- Tela GOODENDING / FINAL -->
+    <div id="final-container" class="position-absolute-top" style="display:none;">
+        <!-- Se você tirar a classe flex-column, os itens dentro da div distribuem-se em linha (experimente!) -->
+        <div class="d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100%;">
+            <h1 class="txtDia"><!-- Título --></h1>
+            <!-- Conteúdo -->
+            <span class="text-white pontuacao"></span>
         </div>
     </div>
 
@@ -82,6 +79,7 @@
     const containerBtn = $("#answer-buttons")
     const containerBg = $("#background-container")
     const containerDaycicle = $("#daycicle-container")
+    const containerFim = $("#final-container")
     var _nomeJogador = "";
     var _pontuacao = 0;
     var _hotdog, _local, _preco, _promocao;
@@ -93,22 +91,8 @@
         comecarJogo();
     })
 
-    /* startButton.addEventListener('click', comecarJogo)
-    nextButton.addEventListener('click', () => {
-        /* escolherResposta();
-        currentQuestionIndex++
-        proximaPergunta()
-    })
-    finalizeButton.addEventListener('click', () => {
-        escolherResposta();
-        currentQuestionIndex++
-        mostrarResultado() (?)
-        questionContainerElement.classList.add('fade-out')
-        setTimeout(telaLista, 1500)
-    }) */
-
     function comecarJogo() {
-        mudarDia(_dia4, "introdução");
+        mudarDia(_intro, "introdução");
     }
 
     function proximoTexto() {
@@ -226,6 +210,8 @@
        mudarMusica("badending")
     }
     function fim() {
+        setTimeout(function(){containerFim.fadeIn(800)}, 3000)
+        $(".pontuacao").text(_pontuacao)
         if(_pontuacao < 0) {
             mudarMusica("badending")
         } else if(_pontuacao > 0) {
