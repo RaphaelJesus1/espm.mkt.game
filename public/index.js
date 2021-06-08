@@ -26,7 +26,6 @@ function openQuestions() {
 
 function chamarMarcio() {
   marcio.removeClass("d-none")
-  console.log("marcio normal chamado")
   marcio.addClass("animate-chegar")
   setTimeout(function() {marcio.removeClass("animate-chegar")}, 2100) // remover a classe dps de acabar o efeito
   // pra não conflitar com a animação de saída mais tarde.

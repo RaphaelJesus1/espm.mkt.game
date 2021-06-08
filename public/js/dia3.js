@@ -31,7 +31,7 @@ codigo concatenaOpcao('btnPreco',_preco.texto )#
 <span class="narrador">Os clientes que  acabam optando pelo seu produto ficam muito satisfeitos pelo que estão consumindo de acordo com o que estão pagando.</span># 
 <span class="narrador">A concorrência ainda persiste, entretanto suas decisões fizeram com que você ganhasse espaço na região.</span>#
 <span class="player"> "Parece que minhas decisões estão dando frutos! Estou muito perto de terminar esse processo."</span>#
-<span class="narrador">Seu dia foi um de muitas decisões difíceis e situações desafiadoras, mas necessários para chegar ao fim desse processo e prosperar, <span id="nome"></span></span>#
+<span class="narrador">Seu dia foi um de muitas decisões difíceis e situações desafiadoras, mas necessários para chegar ao fim desse processo e prosperar, [nome]#
 
 ...#
 
