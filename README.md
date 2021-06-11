@@ -7,4 +7,7 @@ Projeto final da aula de marketing estratégico - 2021.01
 ### Rota para acessar a página do quiz:
 localhost:1337/quiz
 
+#### Link para jogar online: https://academico.espm.br/jornadamarketeiro
+
+
 <!-- <h4>P.s. não esqueça de rodar o banco antes de acessar a página 😉</h4> -->
